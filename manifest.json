@@ -1,0 +1,13 @@
+{
+  "name": "مكتبتي | Ma Bibliothèque",
+  "short_name": "مكتبتي",
+  "description": "أرشيف شخصي متزامن للكتب والمجلات والدوريات والمقالات",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#173b35",
+  "theme_color": "#173b35",
+  "dir": "rtl",
+  "lang": "ar"
+}
