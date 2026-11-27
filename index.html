@@ -2,12 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#173b35">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="مكتبتي">
 <title>مكتبتي | Ma Bibliothèque — 0.9</title>
 <style>
 :root{
@@ -21,14 +17,13 @@ html[data-theme="dark"]{
   --red:#e07070;--tag-bg:#233b35;--tag-ink:#b7dfd5;--shadow:0 10px 30px #00000045
 }
 *{box-sizing:border-box}
-html,body{max-width:100%;overflow-x:hidden}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;transition:background .2s,color .2s}
 button,input,select,textarea{font:inherit}
-button{cursor:pointer;touch-action:manipulation}
-.app{min-height:100vh;display:grid;grid-template-columns:260px 1fr;max-width:100%}
+button{cursor:pointer}
+.app{min-height:100vh;display:grid;grid-template-columns:260px 1fr}
 .side{background:#173b35;color:#fff;padding:26px 18px;display:flex;flex-direction:column;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;padding:4px 8px}
-.logo{width:42px;height:42px;border:1px solid #ffffff55;border-radius:13px;display:grid;place-items:center;color:#e5c991;font-size:23px;flex-shrink:0}
+.logo{width:42px;height:42px;border:1px solid #ffffff55;border-radius:13px;display:grid;place-items:center;color:#e5c991;font-size:23px}
 .brand h1{font-size:20px;margin:0}
 .brand small{display:block;color:#b9cbc4;font-size:11px;margin-top:4px;direction:ltr;text-align:right}
 html[dir="ltr"] .brand small{text-align:left}
@@ -36,18 +31,18 @@ html[dir="ltr"] .brand small{text-align:left}
 .nav{display:grid;gap:6px}
 .nav button{border:0;background:transparent;color:#d9e5df;text-align:right;padding:12px;border-radius:10px;display:flex;gap:12px;align-items:center}
 .nav button.active,.nav button:hover{background:#ffffff18;color:#fff}
-.nav .ico{width:22px;text-align:center;font-size:17px;flex-shrink:0}
+.nav .ico{width:22px;text-align:center;font-size:17px}
 .side-foot{margin-top:auto;color:#b9cbc4;font-size:11px;line-height:1.8;padding:8px}
-.main{min-width:0;max-width:100%}
+.main{min-width:0}
 .top{min-height:76px;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 34px;gap:15px;position:sticky;top:0;z-index:5;flex-wrap:wrap}
 .top h2{font-size:18px;margin:0}
-.top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:100%}
+.top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .lang,.outline,.primary,.danger,.icon-btn{border-radius:9px;padding:9px 13px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .icon-btn{padding:9px 11px;display:inline-flex;align-items:center;justify-content:center}
 .primary{background:var(--green);color:#fff;border-color:var(--green)}
 .primary:hover{background:var(--green2)}
 .sync-pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:20px;font-size:11px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)}
-.sync-dot{width:8px;height:8px;border-radius:50%;background:#888;flex-shrink:0}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:#888}
 .sync-pill.online .sync-dot{background:#249e58}
 .sync-pill.syncing .sync-dot{background:#d89b1e}
 .sync-pill.error .sync-dot{background:var(--red)}
@@ -57,10 +52,10 @@ html[dir="ltr"] .brand small{text-align:left}
 .welcome p{color:var(--muted);margin:0;font-size:13px}
 .eyebrow{color:var(--gold);font-size:11px;font-weight:bold;letter-spacing:.4px;margin-bottom:8px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
-.stat,.panel,.card{background:var(--surface);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);max-width:100%}
+.stat,.panel,.card{background:var(--surface);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}
 .stat{padding:18px}
-.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;gap:8px}
-.stat-icon{width:34px;height:34px;border-radius:10px;background:var(--surface2);border:1px solid var(--line);display:grid;place-items:center;color:var(--green);font-size:17px;flex-shrink:0}
+.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.stat-icon{width:34px;height:34px;border-radius:10px;background:var(--surface2);border:1px solid var(--line);display:grid;place-items:center;color:var(--green);font-size:17px}
 .stat strong{display:block;font-size:26px;margin-top:13px;color:var(--green)}
 .panel{padding:20px;margin-bottom:18px}
 .panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px;flex-wrap:wrap}
@@ -73,7 +68,7 @@ html[dir="ltr"] .brand small{text-align:left}
 .quick span{font-size:12px;color:var(--muted)}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}
 .toolbar input,.toolbar select{max-width:260px}
-.field,input,select,textarea{border:1px solid var(--line);border-radius:9px;padding:10px 11px;background:var(--surface);color:var(--ink);width:100%;max-width:100%;outline:none}
+.field,input,select,textarea{border:1px solid var(--line);border-radius:9px;padding:10px 11px;background:var(--surface);color:var(--ink);width:100%;outline:none}
 .field:focus,input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #c5a46d25}
 .toolbar .search{flex:1;min-width:200px;max-width:none}
 .book-filters{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:12px;margin:0 0 15px}
@@ -82,7 +77,7 @@ html[dir="ltr"] .brand small{text-align:left}
 .book-counts{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
 .count-chip{border:1px solid var(--line);background:var(--surface);border-radius:20px;padding:6px 10px;font-size:11px;color:var(--muted)}
 .count-chip b{color:var(--green);margin-inline-start:4px}
-.table-wrap{overflow:auto;max-width:100%}
+.table-wrap{overflow:auto}
 table{width:100%;border-collapse:collapse;min-width:650px}
 th,td{text-align:right;padding:13px 10px;border-bottom:1px solid var(--line);font-size:13px}
 th{color:var(--muted);font-weight:normal;font-size:11px;background:var(--surface2)}
@@ -107,7 +102,7 @@ html[data-theme="dark"] .st-review{background:#282a45;color:#b8bdf8}
 .mini.del{color:var(--red)}
 .section-title{margin:0 0 18px;font-size:23px}
 .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.form-group{display:flex;flex-direction:column;gap:6px;min-width:0}
+.form-group{display:flex;flex-direction:column;gap:6px}
 .form-group label{font-size:12px;color:var(--muted)}
 .form-group.full{grid-column:1/-1}
 .form-actions{display:flex;gap:9px;justify-content:flex-start;margin-top:18px;flex-wrap:wrap}
@@ -118,7 +113,7 @@ html[data-theme="dark"] .st-review{background:#282a45;color:#b8bdf8}
 .modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:10px}
 .modal-head h3{margin:0}
 .close{border:0;background:transparent;font-size:24px;color:var(--muted)}
-.toast{position:fixed;bottom:20px;left:20px;right:20px;max-width:420px;background:#173b35;color:#fff;padding:12px 17px;border-radius:10px;display:none;z-index:30;font-size:13px;box-shadow:var(--shadow)}
+.toast{position:fixed;bottom:20px;left:20px;background:#173b35;color:#fff;padding:12px 17px;border-radius:10px;display:none;z-index:30;font-size:13px;box-shadow:var(--shadow)}
 .toast.show{display:block}
 .hidden{display:none!important}
 .home-search{border:2px solid var(--gold)}
@@ -128,7 +123,7 @@ html[data-theme="dark"] .st-review{background:#282a45;color:#b8bdf8}
 .result-row:hover{border-color:var(--gold)}
 .result-row span{font-size:11px;color:var(--muted)}
 .footer-note{font-size:11px;color:var(--muted);margin-top:22px;line-height:1.8}
-.author-choices{display:flex;flex-wrap:wrap;gap:6px;max-height:150px;overflow:auto;border:1px solid var(--line);border-radius:9px;padding:9px;background:var(--surface2)}
+.author-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;max-height:150px;overflow:auto;border:1px solid var(--line);border-radius:9px;padding:9px;background:var(--surface2)}
 .author-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .publisher-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .publisher-tools button{white-space:nowrap}
@@ -138,7 +133,7 @@ html[data-theme="dark"] .st-review{background:#282a45;color:#b8bdf8}
 .detail-item span{font-size:13px;word-break:break-word;line-height:1.6}
 .detail-item.full{grid-column:1/-1}
 .detail-item a{color:var(--gold)}
-.auth-tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.auth-tabs{display:flex;gap:8px;margin-bottom:14px}
 .auth-tabs button.active{background:var(--green);color:#fff;border-color:var(--green)}
 .user-box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .err-box{margin-top:10px;padding:10px 12px;border-radius:9px;background:#fdeaea;color:#8e2424;font-size:12px;line-height:1.6}
@@ -146,58 +141,33 @@ html[data-theme="dark"] .st-review{background:#282a45;color:#b8bdf8}
 html[data-theme="dark"] .err-box{background:#3a1c1c;color:#f4a2a2}
 html[data-theme="dark"] .info-box{background:#1b332c;color:#bce3d7}
 html[dir="ltr"] th,html[dir="ltr"] td,html[dir="ltr"] .nav button,html[dir="ltr"] .quick,html[dir="ltr"] .result-row{text-align:left}
-
-@media(max-width:980px){
-  .quick-grid{grid-template-columns:repeat(2,1fr)}
-  .book-filters{grid-template-columns:1fr 1fr}
-}
-
+@media(max-width:980px){.quick-grid{grid-template-columns:repeat(2,1fr)}.book-filters{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){
   .app{grid-template-columns:1fr}
   .side{padding:12px;gap:10px}
   .brand{padding:5px}
-  .nav{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .nav{display:flex;overflow:auto}
   .nav-label,.side-foot{display:none}
-  .nav button{white-space:nowrap;padding:10px 12px;font-size:13px;flex-shrink:0}
+  .nav button{white-space:nowrap;padding:9px 12px}
   .top{min-height:62px;padding:10px 16px}
   .content{padding:20px 15px}
   .stats{grid-template-columns:repeat(2,1fr)}
 }
-
-@media(max-width:768px){
-  .top{padding:10px 14px;gap:10px}
-  .top h2{font-size:16px;width:100%}
-  .top-actions{width:100%;gap:6px}
-  .top-actions .outline,.top-actions .primary,.top-actions .icon-btn{padding:8px 10px;font-size:12px}
-  .sync-pill{padding:6px 9px;font-size:11px}
-  .toolbar{flex-direction:column;align-items:stretch}
-  .toolbar input,.toolbar select,.toolbar .search{max-width:none;width:100%;min-width:0}
-  .book-filters,.form-grid,.detail-grid{grid-template-columns:1fr}
-  .form-group.full,.detail-item.full{grid-column:auto}
-  input,select,textarea{font-size:16px;padding:11px 12px}
-  button,.mini,.outline,.primary,.icon-btn{min-height:38px}
-  table,thead,tbody,th,td,tr{display:block;min-width:0;width:100%}
-  thead{display:none}
-  tr{border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:10px;background:var(--surface)}
-  td{border:0;padding:6px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;word-break:break-word}
-  td::before{content:attr(data-label);font-size:11px;color:var(--muted);flex-shrink:0}
-  td:first-child{display:block;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:4px}
-  td:first-child::before{display:none}
-  .actions{justify-content:flex-start;width:100%}
-  .result-row{flex-direction:column;gap:4px}
-  .modal{padding:10px}
-  .modal-box{padding:16px;border-radius:14px;max-height:94vh}
-}
-
 @media(max-width:640px){
-  .welcome{align-items:flex-start;flex-direction:column;gap:12px}
-  .welcome h2{font-size:21px}
-  .section-title{font-size:20px}
+  .welcome{align-items:flex-start;flex-direction:column}
   .stats{gap:9px}
   .stat{padding:13px}
   .stat strong{font-size:22px}
-  .quick-grid{grid-template-columns:1fr}
-  .panel{padding:15px}
+  .quick-grid,.book-filters,.form-grid,.detail-grid{grid-template-columns:1fr}
+  .form-group.full,.detail-item.full{grid-column:auto}
+  .top h2{font-size:15px}
+  table,thead,tbody,th,td,tr{display:block;min-width:0}
+  thead{display:none}
+  tr{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px;background:var(--surface)}
+  td{border:0;padding:5px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  td::before{content:attr(data-label);font-size:11px;color:var(--muted);flex-shrink:0}
+  td:first-child{display:block;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:4px}
+  td:first-child::before{display:none}
 }
 </style>
 </head>
@@ -358,12 +328,27 @@ function toast(msg){
 const cloudBridge={
   ready:false,
   user:null,
-  async signInEmail(email,pass){return null},
-  async signUpEmail(email,pass){return null},
-  async signInGoogle(){return null},
-  async signOut(){return null},
-  async pushNow(showFeedback=false){return null},
-  async pullNow(showFeedback=false){return null}
+  async signInEmail(email,pass){
+    if(window.__mbCloudImpl && typeof window.__mbCloudImpl.signInEmail==="function") return window.__mbCloudImpl.signInEmail(email,pass);
+    throw new Error(t("تعذر تهيئة خدمة المصادقة السحابية.","Impossible d'initialiser l'authentification cloud."));
+  },
+  async signUpEmail(email,pass){
+    if(window.__mbCloudImpl && typeof window.__mbCloudImpl.signUpEmail==="function") return window.__mbCloudImpl.signUpEmail(email,pass);
+    throw new Error(t("تعذر تهيئة خدمة المصادقة السحابية.","Impossible d'initialiser l'authentification cloud."));
+  },
+  async signInGoogle(){
+    if(window.__mbCloudImpl && typeof window.__mbCloudImpl.signInGoogle==="function") return window.__mbCloudImpl.signInGoogle();
+    throw new Error(t("تعذر تهيئة خدمة المصادقة السحابية.","Impossible d'initialiser l'authentification cloud."));
+  },
+  async signOut(){
+    if(window.__mbCloudImpl && typeof window.__mbCloudImpl.signOut==="function") return window.__mbCloudImpl.signOut();
+  },
+  async pushNow(showFeedback=false){
+    if(window.__mbCloudImpl && typeof window.__mbCloudImpl.pushNow==="function") return window.__mbCloudImpl.pushNow(showFeedback);
+  },
+  async pullNow(showFeedback=false){
+    if(window.__mbCloudImpl && typeof window.__mbCloudImpl.pullNow==="function") return window.__mbCloudImpl.pullNow(showFeedback);
+  }
 };
 window.__mbCloud=cloudBridge;
 
@@ -460,6 +445,76 @@ function closeAuthModal(){
 window.openAuthModal=openAuthModal;
 window.closeAuthModal=closeAuthModal;
 
+window.switchAuthTab=function(tab){
+  state.authTab=tab;
+  state.authError="";
+  state.authInfo="";
+  renderAuthModal();
+};
+
+window.handleEmailAuth=async function(e){
+  e.preventDefault();
+  state.authError="";
+  state.authInfo="";
+  const email=($("authEmail")?$("authEmail").value:"").trim();
+  const pass=$("authPassword")?$("authPassword").value:"";
+  if(!email||!pass){
+    state.authError=t("يرجى إدخال البريد الإلكتروني وكلمة المرور.","Veuillez saisir l'e-mail et le mot de passe.");
+    renderAuthModal();
+    return;
+  }
+  try{
+    if(state.authTab==="login"){
+      await cloudBridge.signInEmail(email,pass);
+      state.authInfo=t("تم تسجيل الدخول بنجاح.","Connexion réussie.");
+      closeAuthModal();
+    }else{
+      await cloudBridge.signUpEmail(email,pass);
+      state.authInfo=t("تم إنشاء الحساب بنجاح.","Compte créé avec succès.");
+      closeAuthModal();
+    }
+  }catch(err){
+    state.authError=(err && err.message) ? err.message : t("تعذر إتمام عملية الدخول.","Échec de la connexion.");
+    renderAuthModal();
+  }
+};
+
+window.handleGoogleAuth=async function(){
+  state.authError="";
+  state.authInfo="";
+  try{
+    await cloudBridge.signInGoogle();
+    closeAuthModal();
+  }catch(err){
+    state.authError=(err && err.message) ? err.message : t("تعذر تسجيل الدخول عبر Google.","Échec de la connexion Google.");
+    renderAuthModal();
+  }
+};
+
+window.handleLogout=async function(){
+  state.authError="";
+  try{
+    await cloudBridge.signOut();
+    closeAuthModal();
+  }catch(err){
+    state.authError=(err && err.message) ? err.message : t("تعذر تسجيل الخروج.","Échec de la déconnexion.");
+    renderAuthModal();
+  }
+};
+
+window.manualCloudSync=async function(){
+  state.authError="";
+  state.authInfo="";
+  try{
+    await cloudBridge.pushNow(true);
+    state.authInfo=t("تمت المزامنة السحابية بنجاح.","Synchronisation cloud réussie.");
+    renderAuthModal();
+  }catch(err){
+    state.authError=(err && err.message) ? err.message : t("تعذرت المزامنة.","Échec de la synchronisation.");
+    renderAuthModal();
+  }
+};
+
 function renderAuthModal(){
   const box=$("authModalBody");
   if(!box)return;
@@ -483,7 +538,7 @@ function renderAuthModal(){
   }
   const isLogin=state.authTab==="login";
   const protocolNote = window.location.protocol === "file:"
-    ? `<div class="info-box">${t("ملاحظة: إذا كنت تفتح الملف مباشرة من جهازك (file://) وواجهت مشكلة في نافذة Google المنبثقة، فاستخدم البريد وكلمة المرور أو شغّله عبر خادم محلي (مثل Live Server أو استضافة Firebase Hosting).","Note : en ouverture locale (file://), privilégiez l'e-mail/mot de passe ou un serveur local si la fenêtre Google est bloquée.")}</div>`
+    ? `<div class="info-box">${t("ملاحظة: إذا كنت تفتح الملف مباشرة من جهازك (file://) وواجهت مشكلة في نافذة Google المنبثقة، فاستخدم البريد وكلمة المرور أو شغّله عبر خادم محلي أو استضافة Firebase / GitHub Pages.","Note : en ouverture locale (file://), privilégiez l'e-mail/mot de passe ou un serveur local si la fenêtre Google est bloquée.")}</div>`
     : "";
   box.innerHTML=`
     <div class="auth-tabs">
@@ -491,409 +546,505 @@ function renderAuthModal(){
       <button type="button" class="outline ${!isLogin?"active":""}" onclick="window.switchAuthTab('register')">${t("إنشاء حساب جديد","Créer un compte")}</button>
     </div>
     <form onsubmit="window.handleEmailAuth(event)" class="form-grid">
-      <div class="form-group full"><label>${t("البريد الإلكتروني","Adresse e-mail")}</label><input id="authEmail" type="email" required autocomplete="email"></div>
-      <div class="form-group full"><label>${t("كلمة المرور","Mot de passe")}</label><input id="authPassword" type="password" required minlength="6" autocomplete="${isLogin?"current-password":"new-password"}"></div>
+      <div class="form-group full"><label for="authEmail">${t("البريد الإلكتروني","Adresse e-mail")}</label><input id="authEmail" type="email" required autocomplete="email"></div>
+      <div class="form-group full"><label for="authPassword">${t("كلمة المرور","Mot de passe")}</label><input id="authPassword" type="password" required minlength="6" autocomplete="${isLogin?"current-password":"new-password"}"></div>
       <div class="form-group full form-actions" style="margin-top:4px">
         <button class="primary" type="submit">${isLogin?t("دخول ومزامنة","Connexion et sync"):t("إنشاء الحساب","Créer le compte")}</button>
-        <button class="outline" type="button" onclick="window.handleGoogleAuth()">G · ${t("المتابعة عبر Google","Continuer avec Google")}</button>
+        <button class="outline" type="button" onclick="window.handleGoogleAuth()">${t("الدخول عبر Google","Connexion Google")}</button>
       </div>
     </form>
+    ${protocolNote}
     ${state.authInfo?`<div class="info-box">${esc(state.authInfo)}</div>`:""}
     ${state.authError?`<div class="err-box">${esc(state.authError)}</div>`:""}
-    ${protocolNote}
-    <p class="hint" style="margin-top:12px">${t("يمكنك استخدام التطبيق محلياً بدون حساب، وعند تسجيل الدخول سيتم دمج/مزامنة مكتبتك مع حسابك في Firebase.","Vous pouvez utiliser l'application en local ou vous connecter pour synchroniser avec Firebase.")}</p>
   `;
-}
-window.renderAuthModal=renderAuthModal;
-
-window.switchAuthTab=(tab)=>{
-  state.authTab=tab;
-  state.authError="";
-  state.authInfo="";
-  renderAuthModal();
-};
-
-window.handleEmailAuth=async(e)=>{
-  e.preventDefault();
-  state.authError="";
-  state.authInfo="";
-  if(!window.__mbCloud || !window.__mbCloud.ready){
-    state.authError=t("تعذر الاتصال بخدمة Firebase حالياً. تأكد من اتصالك بالإنترنت وأعد تحميل الصفحة.","Impossible de joindre Firebase. Vérifiez votre connexion internet et rechargez la page.");
-    renderAuthModal();
-    return;
-  }
-  const email=$("authEmail").value.trim();
-  const pass=$("authPassword").value;
-  try{
-    if(state.authTab==="login"){
-      await window.__mbCloud.signInEmail(email,pass);
-      toast(t("تم تسجيل الدخول وبدأت المزامنة","Connexion réussie, synchronisation active"));
-    }else{
-      await window.__mbCloud.signUpEmail(email,pass);
-      toast(t("تم إنشاء الحساب وبدأت المزامنة","Compte créé, synchronisation active"));
-    }
-    closeAuthModal();
-  }catch(err){
-    console.error(err);
-    state.authError=(err && err.message) ? String(err.message) : t("تعذر إتمام المصادقة.","Échec de l'authentification.");
-    renderAuthModal();
-  }
-};
-
-window.handleGoogleAuth=async()=>{
-  state.authError="";
-  state.authInfo="";
-  if(!window.__mbCloud || !window.__mbCloud.ready){
-    state.authError=t("تعذر الاتصال بخدمة Firebase حالياً. تأكد من اتصالك بالإنترنت.","Impossible de joindre Firebase.");
-    renderAuthModal();
-    return;
-  }
-  try{
-    await window.__mbCloud.signInGoogle();
-    toast(t("تم تسجيل الدخول عبر Google","Connexion Google réussie"));
-    closeAuthModal();
-  }catch(err){
-    console.error(err);
-    state.authError=(err && err.message) ? String(err.message) : t("تعذر الدخول عبر Google.","Échec de la connexion Google.");
-    renderAuthModal();
-  }
-};
-
-window.handleLogout=async()=>{
-  state.authError="";
-  state.authInfo="";
-  if(!window.__mbCloud || !window.__mbCloud.ready)return;
-  try{
-    await window.__mbCloud.signOut();
-    toast(t("تم تسجيل الخروج","Déconnexion effectuée"));
-    closeAuthModal();
-  }catch(err){
-    console.error(err);
-    state.authError=(err && err.message) ? String(err.message) : t("تعذر تسجيل الخروج.","Échec de déconnexion.");
-    renderAuthModal();
-  }
-};
-
-window.manualCloudSync=async()=>{
-  if(window.__mbCloud && window.__mbCloud.ready)await window.__mbCloud.pullNow(true);
-};
-window.manualCloudPush=async()=>{
-  if(window.__mbCloud && window.__mbCloud.ready)await window.__mbCloud.pushNow(true);
-};
-
-function isArabicLanguage(lang){
-  const s=String(lang||"").trim().toLowerCase();
-  return s==="العربية"||s==="عربي"||s==="arabic"||s==="ar";
-}
-
-function statusBadge(st){
-  const v=st||"unread";
-  const map={
-    unread:[t("غير مقروء","Non lu"),"st-unread"],
-    reading:[t("قيد القراءة","En cours"),"st-reading"],
-    read:[t("مقروء","Lu"),"st-read"],
-    review:[t("للمراجعة","À revoir"),"st-review"]
-  };
-  const item=map[v]||map.unread;
-  return `<span class="status-badge ${item[1]}">${item[0]}</span>`;
 }
 
 function migrateSeriesData(){
-  const names=[...new Set(state.books.map(b=>String(b.series||"").trim()).filter(Boolean))];
-  names.forEach(name=>{
-    if(!state.series.some(x=>(typeof x==="string"?x:x.name)===name)){
-      state.series.push({id:"legacy-"+name,name,description:"",legacy:true});
-    }
-  });
+  if(!Array.isArray(state.series))state.series=[];
+  state.series=state.series.map(s=>typeof s==="string"?{id:"s_"+Math.random().toString(36).slice(2,8),title:s,kind:"سلسلة",publisher:"",notes:""}:s);
 }
-migrateSeriesData();
-
 function migrateAuthors(){
-  let changed=false;
-  state.authors=state.authors.map((a,i)=>{
-    if(typeof a==="string"){changed=true;return {id:"legacy-author-record-"+i,name:a,title:a,details:""}}
-    if(!a.id){changed=true;return {...a,id:"legacy-author-record-"+i}}
-    return a;
-  });
-  state.books.forEach((b,bi)=>{
-    const existing=Array.isArray(b.authorIds)?b.authorIds:[];
-    if(existing.length)return;
-    const raw=String(b.author||"").trim();
-    if(!raw)return;
-    const names=raw.split(/[,،;؛]/).map(x=>x.trim()).filter(Boolean);
-    const ids=names.map(name=>{
-      let found=state.authors.find(a=>String(a.name||a.title||"").trim().toLocaleLowerCase()===name.toLocaleLowerCase());
-      if(!found){
-        found={id:"legacy-author-"+bi+"-"+state.authors.length,name,title:name,details:"",legacy:true};
-        state.authors.push(found);
-        changed=true;
-      }
-      return found.id;
-    });
-    b.authorIds=[...new Set([...existing,...ids])];
-    changed=true;
-  });
-  if(changed)writeLocalStorageOnly();
-}
-migrateAuthors();
-
-function migratePublisherRecords(){
-  let changed=false;
-  state.publishers=state.publishers.map((x,i)=>{
-    if(typeof x==="string"){changed=true;return {id:"legacy-publisher-"+i,name:x}}
-    if(!x.id){changed=true;return {...x,id:"legacy-publisher-"+i}}
-    return x;
-  });
-  state.books.forEach((b,i)=>{
-    const name=String(b.publisher||"").trim();
-    if(!name||(Object.prototype.hasOwnProperty.call(b,"publisherId")&&b.publisherId===""))return;
-    let found=state.publishers.find(x=>String(x.name||"").trim().toLowerCase()===name.toLowerCase());
-    if(!found){
-      found={id:"legacy-publisher-book-"+i+"-"+state.publishers.length,name,legacy:true};
-      state.publishers.push(found);
-      changed=true;
+  if(!Array.isArray(state.authors))state.authors=[];
+  const map=new Map();
+  for(const a of state.authors){
+    const name=(typeof a==="string"?a:(a&&a.name)||"").trim();
+    if(name && !map.has(name))map.set(name,{id:(a&&a.id)||"au_"+Math.random().toString(36).slice(2,8),name,bio:(a&&a.bio)||"",country:(a&&a.country)||""});
+  }
+  for(const b of state.books){
+    const raw=Array.isArray(b.authors)?b.authors:(b.author?[b.author]:[]);
+    for(const n of raw){
+      const name=String(n||"").trim();
+      if(name && !map.has(name))map.set(name,{id:"au_"+Math.random().toString(36).slice(2,8),name,bio:"",country:""});
     }
-    if(b.publisherId!==found.id){b.publisherId=found.id;changed=true}
-  });
-  if(changed)writeLocalStorageOnly();
+  }
+  state.authors=Array.from(map.values());
 }
+function migratePublisherRecords(){
+  if(!Array.isArray(state.publishers))state.publishers=[];
+  const map=new Map();
+  for(const p of state.publishers){
+    const name=(typeof p==="string"?p:(p&&p.name)||"").trim();
+    if(name && !map.has(name))map.set(name,{id:(p&&p.id)||"pub_"+Math.random().toString(36).slice(2,8),name,place:(p&&p.place)||"",notes:(p&&p.notes)||""});
+  }
+  for(const b of state.books){
+    const name=String(b.publisher||"").trim();
+    if(name && !map.has(name))map.set(name,{id:"pub_"+Math.random().toString(36).slice(2,8),name,place:b.place||"",notes:""});
+  }
+  state.publishers=Array.from(map.values());
+}
+
+migrateSeriesData();
+migrateAuthors();
 migratePublisherRecords();
 
-function applyTheme(){
-  document.documentElement.dataset.theme=state.theme;
-  localStorage.setItem("mb_theme",state.theme);
-  const btn=$("themeBtn");
-  if(btn){
-    btn.textContent=state.theme==="dark"?"☀":"☾";
-    btn.title=state.theme==="dark"?t("الوضع النهاري","Mode clair"):t("الوضع الليلي","Mode sombre");
-  }
-}
+const statusLabel=st=>({
+  unread:t("غير مقروء","Non lu"),
+  reading:t("قيد القراءة","En cours"),
+  read:t("مقروء","Lu"),
+  review:t("للمراجعة","À revoir")
+}[st]||t("غير مقروء","Non lu"));
 
-function setupDomain(){
-  const sel=$("domain");
-  if(!sel)return;
-  const prev=sel.value;
-  sel.innerHTML=domains.map((d,i)=>`<option value="${esc(d[0])}">${i+1}. ${esc(ar()?d[0]:d[1])}</option>`).join("");
-  if(prev)sel.value=prev;
+const statusClass=st=>({
+  unread:"st-unread",
+  reading:"st-reading",
+  read:"st-read",
+  review:"st-review"
+}[st]||"st-unread");
+
+function applyTheme(){
+  document.documentElement.setAttribute("data-theme",state.theme);
+  const btn=$("themeBtn");
+  if(btn)btn.textContent=state.theme==="dark"?"☀":"☾";
 }
 
 function applyLang(){
-  localStorage.setItem("mb_lang",state.lang);
-  document.documentElement.lang=ar()?"ar":"fr";
+  document.documentElement.lang=state.lang;
   document.documentElement.dir=ar()?"rtl":"ltr";
-  document.querySelectorAll("[data-ar]").forEach(el=>el.textContent=ar()?el.dataset.ar:el.dataset.fr);
-  document.querySelectorAll("[data-ar-placeholder]").forEach(el=>el.placeholder=ar()?el.dataset.arPlaceholder:el.dataset.frPlaceholder);
+  $("brandTitle").textContent=t("مكتبتي","Ma Bibliothèque");
   $("langBtn").textContent=ar()?"Français":"العربية";
-  $("brandTitle").textContent=ar()?"مكتبتي":"Ma Bibliothèque";
-  applyTheme();
-  setupDomain();
+  document.querySelectorAll("[data-ar]").forEach(el=>{el.textContent=el.getAttribute(ar()?"data-ar":"data-fr")});
+  document.querySelectorAll("[data-ar-placeholder]").forEach(el=>{el.placeholder=el.getAttribute(ar()?"data-ar-placeholder":"data-fr-placeholder")});
+  const dom=$("domain");
+  if(dom){
+    const cur=dom.value;
+    dom.innerHTML=domains.map(d=>`<option value="${esc(d[0])}">${esc(ar()?d[0]:d[1])}</option>`).join("");
+    if(cur)dom.value=cur;
+  }
   setSyncStatus(state.syncStatus);
   render();
 }
 
-function pageName(p){
-  return ({
+function setPage(p){
+  state.page=p;
+  document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===p));
+  const titles={
     home:t("الرئيسية","Accueil"),
-    books:t("الكتب","Livres"),
+    books:t("فضاء الكتب","Espace des livres"),
     collections:t("السلاسل وكتب الجيب","Collections et livres de poche"),
-    series:t("السلاسل وكتب الجيب","Collections et livres de poche"),
-    pockets:t("السلاسل وكتب الجيب","Collections et livres de poche"),
     periodicals:t("المجلات والدوريات","Revues et périodiques"),
     articles:t("المقالات والدراسات","Articles et études"),
     authors:t("المؤلفون والناشرون","Auteurs et éditeurs"),
     classification:t("التصنيف الموضوعي","Classification"),
     backup:t("النسخ والمزامنة","Sauvegarde et sync")
-  })[p] || t("الرئيسية","Accueil");
-}
-
-function setPage(p){
-  if(!p)return;
-  state.page=p;
-  document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===p));
-  const h=$("pageHeading");
-  if(h)h.textContent=pageName(p);
+  };
+  $("pageHeading").textContent=titles[p]||titles.home;
   render();
 }
-window.setPage=setPage;
 
 function render(){
   const v=$("view");
   if(!v)return;
-  const h=$("pageHeading");
-  if(h)h.textContent=pageName(state.page);
-  if(state.page==="home"){
-    const readCount=state.books.filter(b=>b.readingStatus==="read").length;
-    v.innerHTML=`<div class="welcome"><div><div class="eyebrow">${t("مساحتك المعرفية الشخصية","VOTRE ESPACE PERSONNEL")}</div><h2>${t("مرحبا بك في مكتبتك","Bienvenue dans votre bibliothèque")}</h2><p>${t("فهرس شخصي منظم للكتب والسلاسل والدوريات والمقالات مع مزامنة سحابية.","Catalogue personnel organisé pour vos livres, collections, revues et articles avec synchronisation cloud.")}</p></div><button class="primary" type="button" onclick="window.openBook()">＋ ${t("تسجيل كتاب جديد","Ajouter un livre")}</button></div>
-<div class="panel home-search"><div class="panel-head"><h3>⌕ ${t("البحث الشامل في المكتبة","Recherche globale")}</h3><span class="muted">${t("الكتب، السلاسل، الدوريات، المقالات، والمؤلفون","Livres, collections, revues, articles et auteurs")}</span></div><input class="search" id="globalSearch" placeholder="${t("اكتب عنوانا أو مؤلفا أو موضوعا أو كلمة مفتاحية...","Titre, auteur, sujet ou mot-clé...")}"><div id="globalResults" class="global-results"><p class="muted">${t("ابدأ الكتابة لعرض النتائج الفورية من جميع فضاءات المكتبة.","Commencez à saisir pour afficher les résultats instantanés.")}</p></div></div>
-<div class="stats">${[
-  [t("مجموع الكتب","Total des livres"),state.books.length,"▤"],
-  [t("كتب مقروءة","Livres lus"),readCount,"✓"],
-  [t("المجلات والدوريات","Revues et périodiques"),state.periodicals.length,"▧"],
-  [t("المقالات والدراسات","Articles et études"),state.articles.length,"≡"]
-].map(x=>`<div class="stat"><div class="stat-top"><span>${x[0]}</span><span class="stat-icon">${x[2]}</span></div><strong>${x[1]}</strong></div>`).join("")}</div>
-<div class="panel"><div class="panel-head"><h3>${t("الوصول السريع","Accès rapide")}</h3><span class="muted">${t("إضافة سريعة أو تصفح","Ajout rapide ou navigation")}</span></div><div class="quick-grid">
-  <button class="quick" type="button" onclick="window.openBook()">＋<b>${t("إضافة كتاب","Ajouter un livre")}</b><span>${t("كتاب مستقل أو جزء من سلسلة","Fiche d'un livre")}</span></button>
-  <button class="quick" type="button" onclick="window.setPage('collections')">▥<b>${t("السلاسل وكتب الجيب","Collections et poche")}</b><span>${t("تصفح السلاسل وكتب الجيب","Collections et livres de poche")}</span></button>
-  <button class="quick" type="button" onclick="window.setPage('periodicals');window.openPeriodical()">▧<b>${t("إضافة عدد مجلة","Ajouter un numéro")}</b><span>${t("تسجيل عدد من مجلة أو دورية","Numéro de revue ou périodique")}</span></button>
-  <button class="quick" type="button" onclick="window.openArticleModal()">≡<b>${t("إضافة مقال أو دراسة","Ajouter un article")}</b><span>${t("فهرسة مقال علمي أو دراسة","Article ou étude")}</span></button>
-</div></div>
-<div class="panel"><div class="panel-head"><h3>${t("أحدث الكتب المضافة","Derniers livres ajoutés")}</h3><button class="outline" type="button" onclick="window.setPage('books')">${t("عرض الكل","Tout afficher")}</button></div>${bookTable(state.books.slice(-5).reverse())}</div>
-<div class="footer-note">${t("الإصدار 0.9: مرتبط بمشروع Firebase (ma-bibliotheque-cloud) للمزامنة الفورية بين أجهزتك.","Version 0.9 : connecté à Firebase (ma-bibliotheque-cloud) pour la synchronisation entre vos appareils.")}</div>`;
-    const gs=$("globalSearch");
-    if(gs)gs.addEventListener("input",globalSearch);
-  }
-  else if(state.page==="books"){
-    v.innerHTML=`<h2 class="section-title">${t("فضاء الكتب","Espace des livres")}</h2><p class="muted" style="margin:-8px 0 18px">${t("انقر على عنوان أي كتاب لعرض بطاقته الكاملة وملاحظاته.","Cliquez sur le titre d'un livre pour afficher sa fiche complète.")}</p><div class="toolbar"><input class="search" id="bookSearch" placeholder="${t("ابحث بالعنوان أو المؤلف أو الموضوع أو رقم الجرد...","Rechercher par titre, auteur, sujet ou cote...")}"><button class="primary" type="button" onclick="window.openBook()">＋ ${t("إضافة كتاب","Ajouter un livre")}</button></div><div class="book-filters"><div class="filter-box"><label>${t("لغة المحتوى","Langue du contenu")}</label><select id="bookLanguageFilter"><option value="all">${t("كل اللغات","Toutes les langues")}</option><option value="ar">${t("الكتب العربية","Livres en arabe")}</option><option value="foreign">${t("الكتب باللغات الأجنبية","Livres en langues étrangères")}</option></select></div><div class="filter-box"><label>${t("نوع المطبوع","Type de publication")}</label><select id="bookFilter"><option value="">${t("جميع الأنواع","Tous les types")}</option><option value="كتاب مستقل">${t("الكتب المستقلة","Livres autonomes")}</option><option value="جزء من سلسلة">${t("الأجزاء التابعة لسلاسل","Volumes de collections")}</option><option value="كتيب">${t("الكتيبات","Brochures")}</option><option value="مجموعة متعددة الأجزاء">${t("مجموعات متعددة الأجزاء","Ouvrages en plusieurs tomes")}</option></select></div><div class="filter-box"><label>${t("حالة القراءة","État de lecture")}</label><select id="bookStatusFilter"><option value="all">${t("جميع الحالات","Tous les états")}</option><option value="unread">${t("غير مقروء","Non lu")}</option><option value="reading">${t("قيد القراءة","En cours")}</option><option value="read">${t("مقروء","Lu")}</option><option value="review">${t("للمراجعة لاحقا","À revoir")}</option></select></div></div><div class="book-counts" id="bookCounts"></div><div class="panel"><div id="bookResults">${bookTable(state.books.filter(b=>b.kind!=="كتاب جيب"))}</div></div>`;
-    ["bookSearch","bookFilter","bookLanguageFilter","bookStatusFilter"].forEach(id=>{
-      const el=$(id);
-      if(el)el.addEventListener(id==="bookSearch"?"input":"change",filterBooks);
-    });
-    filterBooks();
-  }
-  else if(state.page==="series"||state.page==="collections"||state.page==="pockets"){
-    const linked=state.books.filter(b=>b.kind==="جزء من سلسلة"||b.kind==="كتاب ضمن سلسلة");
-    v.innerHTML=`<h2 class="section-title">${t("السلاسل وكتب الجيب","Collections et livres de poche")}</h2><p class="muted">${t("فضاء موحد يضم السلاسل وأجزاءها وكتب الجيب، مع الاحتفاظ بنوع كل مطبوع في بطاقته.","Espace unifié : collections, volumes et livres de poche.")}</p><div class="panel"><div class="panel-head"><h3>${t("السلاسل المسجلة","Collections enregistrées")} (${state.series.length})</h3><button class="primary" type="button" onclick="window.addSeries()">＋ ${t("إضافة سلسلة","Nouvelle collection")}</button></div>${seriesTable()}</div><div class="panel"><div class="panel-head"><h3>${t("الأجزاء المرتبطة بالسلاسل","Volumes associés")}</h3><button class="outline" type="button" onclick="window.openSeriesVolume()">＋ ${t("إضافة جزء","Ajouter un volume")}</button></div>${bookTable(linked)}</div><div class="panel"><div class="panel-head"><h3>${t("كتب الجيب","Livres de poche")} (${state.books.filter(b=>b.kind==="كتاب جيب").length})</h3><button class="outline" type="button" onclick="window.openPocketBook()">＋ ${t("إضافة كتاب جيب","Ajouter un livre de poche")}</button></div>${bookTable(state.books.filter(b=>b.kind==="كتاب جيب"))}</div>`;
-  }
-  else if(state.page==="periodicals"){v.innerHTML=periodicalsView()}
-  else if(state.page==="articles"){v.innerHTML=articlesView()}
-  else if(state.page==="authors"){
-    let items=state.authors;
-    v.innerHTML=`<h2 class="section-title">${pageName("authors")}</h2><div class="panel"><div class="panel-head"><h3>${t("السجلات المحفوظة","Enregistrements")} (${items.length})</h3><button class="primary" type="button" onclick="window.addRecord('authors')">＋ ${t("إضافة اسم","Ajouter un nom")}</button></div>${recordTable("authors",items)}</div><div class="panel"><div class="panel-head"><div><h3>${t("سجل دور النشر","Répertoire des éditeurs")} (${state.publishers.length})</h3><p class="muted">${t("كل دار نشر تسجل مرة واحدة، ثم يعاد اقتراحها عند فهرسة الكتب.","Chaque éditeur est enregistré une seule fois.")}</p></div><button class="primary" type="button" onclick="window.addPublisher()">＋ ${t("إضافة دار نشر","Ajouter un éditeur")}</button></div>${publisherTable()}</div>`;
-  }
-  else if(state.page==="classification"){
-    v.innerHTML=`<h2 class="section-title">${t("التصنيف الموضوعي","Classification thématique")}</h2><div class="panel"><div class="panel-head"><h3>${t("المجالات المعرفية الرئيسية","Domaines principaux")}</h3><span class="tag">${domains.length} ${t("مجالا","domaines")}</span></div><div class="table-wrap"><table><thead><tr><th>${t("الرمز","Code")}</th><th>${t("المجال","Domaine")}</th><th>${t("عدد الكتب","Livres")}</th></tr></thead><tbody>${domains.map((d,i)=>{const cnt=state.books.filter(b=>b.domain===d[0]).length;return `<tr><td data-label="${t("الرمز","Code")}">${String(i+1).padStart(2,"0")}</td><td data-label="${t("المجال","Domaine")}"><strong>${esc(ar()?d[0]:d[1])}</strong></td><td data-label="${t("عدد الكتب","Livres")}"><span class="tag">${cnt}</span></td></tr>`}).join("")}</tbody></table></div></div>`;
-  }
-  else if(state.page==="backup"){
-    v.innerHTML=`<h2 class="section-title">${t("المزامنة السحابية والنسخ الاحتياطي","Synchronisation cloud et sauvegarde")}</h2>
-<div class="panel">
-  <h3>${t("المزامنة السحابية عبر Firebase","Synchronisation cloud Firebase")}</h3>
-  <p class="muted">${state.user ? t(`متصل بالحساب: ${state.user.email} — تُرفع التعديلات تلقائياً إلى Firestore.`,"Connecté : "+state.user.email+" — synchronisation automatique active.") : t("أنت في الوضع المحلي. سجّل الدخول لمزامنة مكتبتك عبر حاسوبيك وهاتفيك.","Mode local actif. Connectez-vous pour synchroniser vos appareils.")}</p>
-  <div class="actions" style="margin-top:12px">
-    <button class="primary" type="button" onclick="window.openAuthModal()">☁ ${state.user?t("إدارة الحساب","Gérer le compte"):t("تسجيل الدخول / إنشاء حساب","Connexion / Inscription")}</button>
-    ${state.user?`<button class="outline" type="button" onclick="window.manualCloudSync()">↻ ${t("جلب ومزامنة الآن","Synchroniser maintenant")}</button><button class="outline" type="button" onclick="window.manualCloudPush()">↑ ${t("رفع النسخة الحالية","Envoyer vers le cloud")}</button>`:""}
-  </div>
-</div>
-<div class="panel"><h3>${t("تصدير نسخة احتياطية","Exporter une sauvegarde")}</h3><p class="muted">${t("احفظ جميع بيانات المكتبة في ملف JSON يمكنك الاحتفاظ به واستعادته لاحقا.","Enregistrez toutes les données dans un fichier JSON.")}</p><button class="primary" type="button" onclick="window.exportData()">⇩ ${t("تصدير البيانات","Exporter les données")}</button></div>
-<div class="panel"><h3>${t("استعادة نسخة احتياطية","Restaurer une sauvegarde")}</h3><p class="muted">${t("اختر ملف نسخة احتياطية سابقا. ستُنشأ نسخة من بياناتك الحالية تلقائيا قبل الاستبدال.","Choisissez une sauvegarde. Une copie actuelle sera créée automatiquement avant restauration.")}</p><input type="file" id="restoreFile" accept=".json,application/json"><button class="outline" type="button" style="margin-top:12px" onclick="window.restoreData()">⇧ ${t("استعادة البيانات","Restaurer")}</button></div>`;
-  }
+  if(state.page==="home")renderHome(v);
+  else if(state.page==="books")renderBooks(v);
+  else if(state.page==="collections")renderCollections(v);
+  else if(state.page==="periodicals")renderPeriodicals(v);
+  else if(state.page==="articles")renderArticles(v);
+  else if(state.page==="authors")renderAuthors(v);
+  else if(state.page==="classification")renderClassification(v);
+  else if(state.page==="backup")renderBackup(v);
 }
 
-function bookTable(items){
-  if(!items.length)return `<div class="empty"><div class="big">▤</div>${t("لا توجد كتب مسجلة حتى الآن","Aucun livre enregistré pour le moment")}<p>${t("ابدأ بإضافة أول كتاب إلى مكتبتك.","Ajoutez le premier livre à votre bibliothèque.")}</p></div>`;
-  return `<div class="table-wrap"><table><thead><tr><th>${t("العنوان","Titre")}</th><th>${t("المؤلف","Auteur")}</th><th>${t("النوع والحالة","Type et état")}</th><th>${t("التصنيف","Classification")}</th><th>${t("السنة","Année")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>${items.map(b=>`<tr>
-    <td><button type="button" class="title-link" onclick="window.viewBook('${esc(b.id)}')">${esc(b.title)}</button><div class="muted">${esc(b.language||"")}${b.shelf?` · ${t("رف","Cote")}: ${esc(b.shelf)}`:""}</div></td>
-    <td data-label="${t("المؤلف","Auteur")}">${esc(bookAuthorNames(b).join("، ")||"—")}</td>
-    <td data-label="${t("النوع والحالة","Type et état")}"><span class="tag">${esc(b.kind)}</span>${statusBadge(b.readingStatus)}</td>
-    <td data-label="${t("التصنيف","Classification")}">${esc(b.domain||"—")}<div class="muted">${esc(b.topic||"")}</div></td>
-    <td data-label="${t("السنة","Année")}">${esc(b.year||"—")}</td>
-    <td data-label="${t("إجراءات","Actions")}"><div class="actions"><button class="mini" type="button" onclick="window.viewBook('${esc(b.id)}')">${t("عرض","Voir")}</button><button class="mini" type="button" onclick="window.editBook('${esc(b.id)}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deleteBook('${esc(b.id)}')">${t("حذف","Supprimer")}</button></div></td>
-  </tr>`).join("")}</tbody></table></div>`;
+function renderHome(v){
+  v.innerHTML=`
+    <div class="welcome">
+      <div>
+        <div class="eyebrow">${t("فهرسة شخصية منظمة","CATALOGUE PERSONNEL STRUCTURÉ")}</div>
+        <h2>${t("أهلاً بك في مكتبتك الرقمية","Bienvenue dans votre bibliothèque")}</h2>
+        <p>${t("إدارة الكتب، السلاسل، المجلات، المقالات، المؤلفين، الناشرين والتصنيف الموضوعي.","Gérez livres, collections, revues, articles, auteurs, éditeurs et classification.")}</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-top"><span>${t("الكتب المسجلة","Livres")}</span><span class="stat-icon">▤</span></div><strong>${state.books.length}</strong></div>
+      <div class="stat"><div class="stat-top"><span>${t("السلاسل والمجموعات","Collections")}</span><span class="stat-icon">▥</span></div><strong>${state.series.length}</strong></div>
+      <div class="stat"><div class="stat-top"><span>${t("المجلات والدوريات","Revues")}</span><span class="stat-icon">▧</span></div><strong>${state.periodicals.length}</strong></div>
+      <div class="stat"><div class="stat-top"><span>${t("المقالات والدراسات","Articles")}</span><span class="stat-icon">≡</span></div><strong>${state.articles.length}</strong></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>${t("بحث شامل في المكتبة","Recherche globale")}</h3></div>
+      <input class="home-search" id="globalSearch" placeholder="${t("ابحث في الكتب، المقالات، المؤلفين، الناشرين، المجلات...","Rechercher dans livres, articles, auteurs, éditeurs, revues...")}" oninput="window.runGlobalSearch(this.value)">
+      <div class="global-results" id="globalResults"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>${t("وصول سريع","Accès rapide")}</h3></div>
+      <div class="quick-grid">
+        <button class="quick" type="button" onclick="window.openBookModal()"><b>＋ ${t("إضافة كتاب","Ajouter un livre")}</b><span>${t("تسجيل كتاب جديد","Enregistrer un livre")}</span></button>
+        <button class="quick" type="button" onclick="window.openArticleModal()"><b>＋ ${t("إضافة مقال","Ajouter un article")}</b><span>${t("دراسة أو مقال علمي","Étude ou article")}</span></button>
+        <button class="quick" type="button" onclick="setPage('books')"><b>▤ ${t("فضاء الكتب","Espace des livres")}</b><span>${t("تصفح وتصفية الكتب","Parcourir les livres")}</span></button>
+        <button class="quick" type="button" onclick="setPage('backup')"><b>⇅ ${t("النسخ والمزامنة","Sauvegarde et sync")}</b><span>${t("تصدير واستيراد البيانات","Export et import")}</span></button>
+      </div>
+    </div>
+  `;
 }
 
-function viewBook(id){
+window.runGlobalSearch=function(q){
+  const box=$("globalResults");
+  if(!box)return;
+  const term=(q||"").trim().toLowerCase();
+  if(!term){box.innerHTML="";return;}
+  const matchBooks=state.books.filter(b=>JSON.stringify(b).toLowerCase().includes(term));
+  const matchArts=state.articles.filter(a=>JSON.stringify(a).toLowerCase().includes(term));
+  const matchAuth=state.authors.filter(a=>JSON.stringify(a).toLowerCase().includes(term));
+  const matchPubs=state.publishers.filter(p=>JSON.stringify(p).toLowerCase().includes(term));
+  let html="";
+  if(matchBooks.length){
+    html+=`<h4>${t("الكتب","Livres")} (${matchBooks.length})</h4>`+matchBooks.map(b=>`<button class="result-row" type="button" onclick="window.showBookDetail('${b.id}')"><strong>${esc(b.title)}</strong><span>${esc((b.authors||[]).join("، "))}</span></button>`).join("");
+  }
+  if(matchArts.length){
+    html+=`<h4>${t("المقالات","Articles")} (${matchArts.length})</h4>`+matchArts.map(a=>`<button class="result-row" type="button" onclick="window.showArticleDetail('${a.id}')"><strong>${esc(a.title)}</strong><span>${esc(a.author||"")}</span></button>`).join("");
+  }
+  if(matchAuth.length){
+    html+=`<h4>${t("المؤلفون","Auteurs")} (${matchAuth.length})</h4>`+matchAuth.map(a=>`<div class="result-row"><strong>${esc(a.name)}</strong><span>${esc(a.country||"")}</span></div>`).join("");
+  }
+  if(matchPubs.length){
+    html+=`<h4>${t("الناشرون","Éditeurs")} (${matchPubs.length})</h4>`+matchPubs.map(p=>`<div class="result-row"><strong>${esc(p.name)}</strong><span>${esc(p.place||"")}</span></div>`).join("");
+  }
+  box.innerHTML=html||`<div class="empty">${t("لا توجد نتائج مطابقة.","Aucun résultat.")}</div>`;
+};
+
+function renderBooks(v){
+  const list=state.books;
+  v.innerHTML=`
+    <h2 class="section-title">${t("فضاء الكتب","Espace des livres")}</h2>
+    <div class="panel">
+      <div class="toolbar">
+        <input class="search" id="bookSearch" placeholder="${t("بحث بالعنوان، المؤلف، الناشر، الموضوع...","Rechercher titre, auteur, éditeur...")}" oninput="window.filterBooksTable()">
+        <button class="primary" type="button" onclick="window.openBookModal()">＋ ${t("إضافة كتاب","Ajouter un livre")}</button>
+      </div>
+      <div class="book-filters">
+        <div class="filter-box"><label>${t("المجال","Domaine")}</label><select id="filterDomain" onchange="window.filterBooksTable()"><option value="">${t("الكل","Tous")}</option>${domains.map(d=>`<option value="${esc(d[0])}">${esc(ar()?d[0]:d[1])}</option>`).join("")}</select></div>
+        <div class="filter-box"><label>${t("حالة القراءة","État de lecture")}</label><select id="filterStatus" onchange="window.filterBooksTable()"><option value="">${t("الكل","Tous")}</option><option value="unread">${statusLabel("unread")}</option><option value="reading">${statusLabel("reading")}</option><option value="read">${statusLabel("read")}</option><option value="review">${statusLabel("review")}</option></select></div>
+        <div class="filter-box"><label>${t("اللغة","Langue")}</label><select id="filterLang" onchange="window.filterBooksTable()"><option value="">${t("الكل","Toutes")}</option><option>العربية</option><option>الفرنسية</option><option>الإنجليزية</option><option>الإسبانية</option><option>أخرى</option></select></div>
+      </div>
+      <div class="table-wrap" id="booksTableWrap"></div>
+    </div>
+  `;
+  window.filterBooksTable();
+}
+
+window.filterBooksTable=function(){
+  const wrap=$("booksTableWrap");
+  if(!wrap)return;
+  const q=($("bookSearch")?$("bookSearch").value:"").trim().toLowerCase();
+  const dom=$("filterDomain")?$("filterDomain").value:"";
+  const st=$("filterStatus")?$("filterStatus").value:"";
+  const lng=$("filterLang")?$("filterLang").value:"";
+  const rows=state.books.filter(b=>{
+    if(dom && b.domain!==dom)return false;
+    if(st && (b.readingStatus||"unread")!==st)return false;
+    if(lng && b.language!==lng)return false;
+    if(q && !JSON.stringify(b).toLowerCase().includes(q))return false;
+    return true;
+  });
+  if(!rows.length){
+    wrap.innerHTML=`<div class="empty"><div class="big">▤</div>${t("لا توجد كتب مسجلة بعد.","Aucun livre enregistré.")}</div>`;
+    return;
+  }
+  wrap.innerHTML=`
+    <table>
+      <thead><tr>
+        <th>${t("العنوان","Titre")}</th>
+        <th>${t("المؤلفون","Auteurs")}</th>
+        <th>${t("المجال","Domaine")}</th>
+        <th>${t("الحالة","État")}</th>
+        <th>${t("السنة","Année")}</th>
+        <th>${t("إجراءات","Actions")}</th>
+      </tr></thead>
+      <tbody>
+        ${rows.map(b=>`
+          <tr>
+            <td data-label="${t("العنوان","Titre")}"><button class="title-link" type="button" onclick="window.showBookDetail('${b.id}')">${esc(b.title)}</button></td>
+            <td data-label="${t("المؤلفون","Auteurs")}">${esc((b.authors||[]).join("، "))}</td>
+            <td data-label="${t("المجال","Domaine")}"><span class="tag">${esc(b.domain||"")}</span></td>
+            <td data-label="${t("الحالة","État")}"><span class="status-badge ${statusClass(b.readingStatus||"unread")}">${statusLabel(b.readingStatus||"unread")}</span></td>
+            <td data-label="${t("السنة","Année")}">${esc(b.year||"")}</td>
+            <td data-label="${t("إجراءات","Actions")}"><div class="actions">
+              <button class="mini" type="button" onclick="window.openBookModal('${b.id}')">${t("تعديل","Modifier")}</button>
+              <button class="mini del" type="button" onclick="window.deleteBook('${b.id}')">${t("حذف","Supprimer")}</button>
+            </div></td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+};
+
+let selectedBookAuthors=[];
+function renderBookAuthorPicker(){
+  const dl=$("authorSuggestions"),box=$("authorChoices");
+  if(dl)dl.innerHTML=state.authors.map(a=>`<option value="${esc(a.name)}"></option>`).join("");
+  if(!box)return;
+  if(!state.authors.length){
+    box.innerHTML=`<small class="muted">${t("لا يوجد مؤلفون مسجلون بعد.","Aucun auteur enregistré.")}</small>`;
+    return;
+  }
+  box.innerHTML=state.authors.map(a=>{
+    const checked=selectedBookAuthors.includes(a.name)?"checked":"";
+    return `<label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox" ${checked} onchange="window.toggleBookAuthor('${esc(a.name)}',this.checked)"> ${esc(a.name)}</label>`;
+  }).join("");
+}
+window.toggleBookAuthor=function(name,checked){
+  if(checked && !selectedBookAuthors.includes(name))selectedBookAuthors.push(name);
+  if(!checked)selectedBookAuthors=selectedBookAuthors.filter(x=>x!==name);
+};
+window.addAuthorToBook=function(){
+  const inp=$("authorSearch");
+  const name=(inp?inp.value:"").trim();
+  if(!name)return;
+  if(!state.authors.some(a=>a.name===name)){
+    state.authors.push({id:"au_"+Date.now(),name,bio:"",country:""});
+    save();
+  }
+  if(!selectedBookAuthors.includes(name))selectedBookAuthors.push(name);
+  if(inp)inp.value="";
+  renderBookAuthorPicker();
+};
+window.quickAddAuthor=function(){
+  const name=prompt(t("اسم المؤلف الجديد:","Nom du nouvel auteur :"));
+  if(!name||!name.trim())return;
+  const clean=name.trim();
+  if(!state.authors.some(a=>a.name===clean)){
+    state.authors.push({id:"au_"+Date.now(),name:clean,bio:"",country:""});
+    save();
+  }
+  if(!selectedBookAuthors.includes(clean))selectedBookAuthors.push(clean);
+  renderBookAuthorPicker();
+};
+window.savePublisherFromInput=function(){
+  const inp=$("publisher"),st=$("publisherStatus");
+  const name=(inp?inp.value:"").trim();
+  if(!name)return;
+  if(!state.publishers.some(p=>p.name===name)){
+    state.publishers.push({id:"pub_"+Date.now(),name,place:$("place")?$("place").value.trim():"",notes:""});
+    save();
+  }
+  if(st)st.textContent=t("تم حفظ دار النشر.","Éditeur enregistré.");
+};
+
+window.openBookModal=function(id=null){
+  const m=$("bookModal");
+  if(!m)return;
+  const s=$("series");
+  if(s)s.innerHTML=`<option value="">${t("— بدون سلسلة —","— Sans collection —")}</option>`+state.series.map(x=>`<option value="${esc(x.title)}">${esc(x.title)}</option>`).join("");
+  const pdl=$("publisherSuggestions");
+  if(pdl)pdl.innerHTML=state.publishers.map(p=>`<option value="${esc(p.name)}"></option>`).join("");
+  $("editId").value="";
+  $("bookForm").reset();
+  selectedBookAuthors=[];
+  $("modalTitle").textContent=t("إضافة كتاب جديد","Ajouter un livre");
+  if(id){
+    const b=state.books.find(x=>x.id===id);
+    if(b){
+      $("modalTitle").textContent=t("تعديل بيانات الكتاب","Modifier le livre");
+      $("editId").value=b.id;
+      $("title").value=b.title||"";
+      selectedBookAuthors=Array.isArray(b.authors)?[...b.authors]:[];
+      $("language").value=b.language||"العربية";
+      $("kind").value=b.kind||"كتاب مستقل";
+      $("readingStatus").value=b.readingStatus||"unread";
+      $("domain").value=b.domain||domains[0][0];
+      $("subdomain").value=b.subdomain||"";
+      $("topic").value=b.topic||"";
+      $("publisher").value=b.publisher||"";
+      $("place").value=b.place||"";
+      $("year").value=b.year||"";
+      $("edition").value=b.edition||"";
+      $("pages").value=b.pages||"";
+      $("isbn").value=b.isbn||"";
+      $("shelf").value=b.shelf||"";
+      $("series").value=b.series||"";
+      $("seriesNo").value=b.seriesNo||"";
+      $("keywords").value=Array.isArray(b.keywords)?b.keywords.join("، "):(b.keywords||"");
+      $("notes").value=b.notes||"";
+    }
+  }
+  renderBookAuthorPicker();
+  m.classList.add("show");
+};
+function closeBookModal(){const m=$("bookModal");if(m)m.classList.remove("show");}
+window.deleteBook=function(id){
+  if(!confirm(t("هل تريد حذف هذا الكتاب؟","Supprimer ce livre ?")))return;
+  state.books=state.books.filter(b=>b.id!==id);
+  save();
+  render();
+};
+window.showBookDetail=function(id){
   const b=state.books.find(x=>x.id===id);
   if(!b)return;
-  $("detailModalTitle").textContent=b.title||t("بطاقة الكتاب","Fiche du livre");
+  $("detailModalTitle").textContent=b.title;
   $("detailModalBody").innerHTML=`<div class="detail-grid">
-    <div class="detail-item"><b>${t("المؤلفون","Auteurs")}</b><span>${esc(bookAuthorNames(b).join("، ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("حالة القراءة","État de lecture")}</b><span>${statusBadge(b.readingStatus)}</span></div>
-    <div class="detail-item"><b>${t("نوع المطبوع واللغة","Type et langue")}</b><span>${esc(b.kind||"—")} · ${esc(b.language||"—")}</span></div>
-    <div class="detail-item"><b>${t("التصنيف","Classification")}</b><span>${esc([b.domain,b.subdomain,b.topic].filter(Boolean).join(" / ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("الناشر ومكان وسنة النشر","Éditeur, lieu et année")}</b><span>${esc([b.publisher,b.place,b.year].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("الطبعة والصفحات","Édition et pages")}</b><span>${esc([b.edition?`${t("ط.","Éd.")} ${b.edition}`:"",b.pages?`${b.pages} ${t("ص.","p.")}`:""].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>ISBN</b><span>${esc(b.isbn||"—")}</span></div>
-    <div class="detail-item"><b>${t("رقم الجرد / الرف","Cote / emplacement")}</b><span>${esc(b.shelf||"—")}</span></div>
-    ${b.series?`<div class="detail-item full"><b>${t("السلسلة","Collection")}</b><span>${esc(b.series)}${b.seriesNo?` (${t("رقم","n°")} ${esc(b.seriesNo)})`:""}</span></div>`:""}
-    <div class="detail-item full"><b>${t("الكلمات المفتاحية","Mots-clés")}</b><span>${esc(b.keywords||"—")}</span></div>
-    <div class="detail-item full"><b>${t("ملاحظات وملخص","Notes et résumé")}</b><span>${esc(b.notes||"—")}</span></div>
+    <div class="detail-item"><b>${t("المؤلفون","Auteurs")}</b><span>${esc((b.authors||[]).join("، ")||"—")}</span></div>
+    <div class="detail-item"><b>${t("المجال","Domaine")}</b><span>${esc(b.domain||"—")}</span></div>
+    <div class="detail-item"><b>${t("دار النشر","Éditeur")}</b><span>${esc(b.publisher||"—")}</span></div>
+    <div class="detail-item"><b>${t("السنة","Année")}</b><span>${esc(b.year||"—")}</span></div>
+    <div class="detail-item full"><b>${t("ملاحظات","Notes")}</b><span>${esc(b.notes||"—")}</span></div>
   </div>`;
-  $("detailModalActions").innerHTML=`<button class="primary" type="button" onclick="window.closeDetailModal();window.editBook('${esc(b.id)}')">${t("تعديل البطاقة","Modifier")}</button><button class="outline" type="button" onclick="window.closeDetailModal()">${t("إغلاق","Fermer")}</button>`;
+  $("detailModalActions").innerHTML=`<button class="primary" type="button" onclick="window.closeDetailModal();window.openBookModal('${b.id}')">${t("تعديل","Modifier")}</button><button class="outline" type="button" onclick="window.closeDetailModal()">${t("إغلاق","Fermer")}</button>`;
   $("detailModal").classList.add("show");
-}
-window.viewBook=viewBook;
+};
+window.closeDetailModal=function(){const m=$("detailModal");if(m)m.classList.remove("show");};
 
-function articlesView(){
-  const rows=state.articles.slice().sort((a,b)=>String(b.year||"").localeCompare(String(a.year||""))||String(a.title||"").localeCompare(String(b.title||"")));
-  return `<h2 class="section-title">${t("فضاء المقالات والدراسات","Espace des articles et études")}</h2><p class="muted" style="margin:-8px 0 18px">${t("فهرسة المقالات العلمية والدراسات والأوراق البحثية مع ربطها بالوعاء الحاضن والصفحات والروابط.","Indexez les articles scientifiques, études et communications avec leur source, pages et liens.")}</p><div class="toolbar"><input id="articleSearch" class="search" oninput="window.filterArticles(this.value)" placeholder="${t("ابحث بالعنوان أو الكاتب أو المجلة أو الكلمات المفتاحية...","Rechercher par titre, auteur, revue ou mots-clés...")}"><button class="primary" type="button" onclick="window.openArticleModal()">＋ ${t("إضافة مقال أو دراسة","Ajouter un article")}</button></div><div class="panel"><div class="panel-head"><h3>${t("المقالات والدراسات المسجلة","Articles et études enregistrés")} (${rows.length})</h3><span class="tag">${t("فهرسة ببليوغرافية منظمة","Fiche bibliographique")}</span></div><div id="articleResults">${articleTable(rows)}</div></div>`;
-}
-
-function filterArticles(value){
-  const q=String(value||"").toLocaleLowerCase();
-  const rows=state.articles.slice().sort((a,b)=>String(b.year||"").localeCompare(String(a.year||""))||String(a.title||"").localeCompare(String(b.title||"")));
-  const filtered=rows.filter(x=>[x.title,x.author,x.container,x.kind,x.year,x.issue,x.pages,x.domain,x.keywords,x.notes,x.details].join(" ").toLocaleLowerCase().includes(q));
-  const target=$("articleResults");
-  if(target)target.innerHTML=articleTable(filtered);
-}
-window.filterArticles=filterArticles;
-
-function articleTable(items){
-  if(!items.length)return `<div class="empty"><div class="big">≡</div>${t("لا توجد مقالات أو دراسات مسجلة بعد. ابدأ بإضافة أول مقال.","Aucun article ou étude enregistré. Ajoutez votre première fiche.")}</div>`;
-  return `<div class="table-wrap"><table><thead><tr><th>${t("العنوان والنوع","Titre et type")}</th><th>${t("الكاتب / الباحث","Auteur")}</th><th>${t("المجلة / الوعاء الحاضن","Source / revue")}</th><th>${t("السنة والصفحات","Année et pages")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>${items.map(x=>{
-    const container=x.container||x.publisher||"—";
-    const meta=[x.year,x.issue,x.pages?`${t("ص.","p.")} ${x.pages}`:""].filter(Boolean).join(" · ")||"—";
-    return `<tr>
-      <td><button type="button" class="title-link" onclick="window.viewArticle('${esc(x.id)}')">${esc(x.title||"—")}</button><div class="muted"><span class="tag">${esc(x.kind||t("مقال","Article"))}</span>${statusBadge(x.readingStatus)}</div></td>
-      <td data-label="${t("الكاتب","Auteur")}">${esc(x.author||"—")}</td>
-      <td data-label="${t("الوعاء الحاضن","Source")}">${esc(container)}</td>
-      <td data-label="${t("السنة والصفحات","Année et pages")}">${esc(meta)}</td>
-      <td data-label="${t("إجراءات","Actions")}"><div class="actions"><button class="mini" type="button" onclick="window.viewArticle('${esc(x.id)}')">${t("عرض","Voir")}</button><button class="mini" type="button" onclick="window.openArticleModal('${esc(x.id)}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deleteArticle('${esc(x.id)}')">${t("حذف","Supprimer")}</button></div></td>
-    </tr>`;
-  }).join("")}</tbody></table></div>`;
-}
-
-function populateArticleSuggestions(){
-  const authorDl=$("articleAuthorSuggestions");
-  const containerDl=$("articleContainerSuggestions");
-  const domainDl=$("articleDomainSuggestions");
-  if(authorDl){
-    const names=[...new Set([...state.authors.map(a=>a.name||a.title),...state.articles.map(a=>a.author)].map(s=>String(s||"").trim()).filter(Boolean))];
-    authorDl.innerHTML=names.map(n=>`<option value="${esc(n)}"></option>`).join("");
+$("bookForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const title=$("title").value.trim();
+  if(!title)return;
+  const typedAuthor=($("authorSearch").value||"").trim();
+  if(typedAuthor && !selectedBookAuthors.includes(typedAuthor))selectedBookAuthors.push(typedAuthor);
+  for(const n of selectedBookAuthors){
+    if(!state.authors.some(a=>a.name===n))state.authors.push({id:"au_"+Date.now()+"_"+Math.random().toString(36).slice(2,5),name:n,bio:"",country:""});
   }
-  if(containerDl){
-    const containers=[...new Set([...state.periodicals.map(p=>p.journalName||p.title),...state.articles.map(a=>a.container)].map(s=>String(s||"").trim()).filter(Boolean))];
-    containerDl.innerHTML=containers.map(c=>`<option value="${esc(c)}"></option>`).join("");
-  }
-  if(domainDl){
-    domainDl.innerHTML=domains.map(d=>`<option value="${esc(ar()?d[0]:d[1])}"></option>`).join("");
-  }
-}
+  const pub=$("publisher").value.trim();
+  if(pub && !state.publishers.some(p=>p.name===pub))state.publishers.push({id:"pub_"+Date.now(),name:pub,place:$("place")?$("place").value.trim():"",notes:""});
+  const rec={
+    id:$("editId").value||("b_"+Date.now()+"_"+Math.random().toString(36).slice(2,6)),
+    title,
+    authors:selectedBookAuthors,
+    language:$("language").value,
+    kind:$("kind").value,
+    readingStatus:$("readingStatus").value,
+    domain:$("domain").value,
+    subdomain:$("subdomain").value.trim(),
+    topic:$("topic").value.trim(),
+    publisher:pub,
+    place:$("place").value.trim(),
+    year:$("year").value.trim(),
+    edition:$("edition").value.trim(),
+    pages:$("pages").value.trim(),
+    isbn:$("isbn").value.trim(),
+    shelf:$("shelf").value.trim(),
+    series:$("series").value,
+    seriesNo:$("seriesNo").value.trim(),
+    keywords:$("keywords").value.split(/[،,]/).map(s=>s.trim()).filter(Boolean),
+    notes:$("notes").value.trim()
+  };
+  const idx=state.books.findIndex(x=>x.id===rec.id);
+  if(idx>=0)state.books[idx]=rec;
+  else state.books.push(rec);
+  save();
+  closeBookModal();
+  toast(t("تم حفظ الكتاب.","Livre enregistré."));
+  render();
+});
 
-function openArticleModal(id=""){
-  const x=id?state.articles.find(a=>a.id===id):null;
+function renderCollections(v){
+  v.innerHTML=`
+    <h2 class="section-title">${t("السلاسل وكتب الجيب","Collections et livres de poche")}</h2>
+    <div class="panel">
+      <div class="toolbar">
+        <input id="newSeriesTitle" placeholder="${t("اسم السلسلة أو المجموعة...","Nom de la collection...")}">
+        <button class="primary" type="button" onclick="window.addSeries()">＋ ${t("إضافة سلسلة","Ajouter")}</button>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>${t("السلسلة","Collection")}</th><th>${t("الكتب المرتبطة","Livres")}</th><th>${t("إجراء","Action")}</th></tr></thead><tbody>
+        ${state.series.length?state.series.map(s=>`<tr><td><strong>${esc(s.title)}</strong></td><td>${state.books.filter(b=>b.series===s.title).length}</td><td><button class="mini del" type="button" onclick="window.deleteSeries('${s.id}')">${t("حذف","Supprimer")}</button></td></tr>`).join(""):`<tr><td colspan="3"><div class="empty">${t("لا توجد سلاسل بعد.","Aucune collection.")}</div></td></tr>`}
+      </tbody></table></div>
+    </div>
+  `;
+}
+window.addSeries=function(){
+  const inp=$("newSeriesTitle");
+  const title=(inp?inp.value:"").trim();
+  if(!title)return;
+  state.series.push({id:"s_"+Date.now(),title});
+  save();
+  render();
+};
+window.deleteSeries=function(id){
+  state.series=state.series.filter(s=>s.id!==id);
+  save();
+  render();
+};
+
+function renderPeriodicals(v){
+  v.innerHTML=`
+    <h2 class="section-title">${t("المجلات والدوريات","Revues et périodiques")}</h2>
+    <div class="panel">
+      <div class="toolbar">
+        <input id="perTitle" placeholder="${t("اسم المجلة أو الدورية...","Nom de la revue...")}">
+        <input id="perIssue" placeholder="${t("العدد أو السنة...","Numéro / année...")}">
+        <button class="primary" type="button" onclick="window.addPeriodical()">＋ ${t("إضافة","Ajouter")}</button>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>${t("الدورية","Revue")}</th><th>${t("العدد / السنة","Numéro")}</th><th>${t("إجراء","Action")}</th></tr></thead><tbody>
+        ${state.periodicals.length?state.periodicals.map(p=>`<tr><td><strong>${esc(p.title)}</strong></td><td>${esc(p.issue||"")}</td><td><button class="mini del" type="button" onclick="window.deletePeriodical('${p.id}')">${t("حذف","Supprimer")}</button></td></tr>`).join(""):`<tr><td colspan="3"><div class="empty">${t("لا توجد دوريات بعد.","Aucune revue.")}</div></td></tr>`}
+      </tbody></table></div>
+    </div>
+  `;
+}
+window.addPeriodical=function(){
+  const title=($("perTitle")?$("perTitle").value:"").trim();
+  if(!title)return;
+  state.periodicals.push({id:"p_"+Date.now(),title,issue:($("perIssue")?$("perIssue").value:"").trim()});
+  save();
+  render();
+};
+window.deletePeriodical=function(id){
+  state.periodicals=state.periodicals.filter(p=>p.id!==id);
+  save();
+  render();
+};
+
+function renderArticles(v){
+  v.innerHTML=`
+    <h2 class="section-title">${t("المقالات والدراسات","Articles et études")}</h2>
+    <div class="panel">
+      <div class="panel-head"><h3>${t("قائمة المقالات والدراسات","Liste des articles")}</h3><button class="primary" type="button" onclick="window.openArticleModal()">＋ ${t("إضافة مقال","Ajouter un article")}</button></div>
+      <div class="table-wrap"><table><thead><tr><th>${t("العنوان","Titre")}</th><th>${t("الكاتب","Auteur")}</th><th>${t("المصدر","Source")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>
+        ${state.articles.length?state.articles.map(a=>`<tr><td><button class="title-link" type="button" onclick="window.showArticleDetail('${a.id}')">${esc(a.title)}</button></td><td>${esc(a.author||"")}</td><td>${esc(a.container||"")}</td><td><div class="actions"><button class="mini" type="button" onclick="window.openArticleModal('${a.id}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deleteArticle('${a.id}')">${t("حذف","Supprimer")}</button></div></td></tr>`).join(""):`<tr><td colspan="4"><div class="empty">${t("لا توجد مقالات بعد.","Aucun article.")}</div></td></tr>`}
+      </tbody></table></div>
+    </div>
+  `;
+}
+window.openArticleModal=function(id=null){
   $("articleForm").reset();
-  populateArticleSuggestions();
-  $("articleId").value=x?.id||"";
-  $("artTitle").value=x?.title||"";
-  $("artAuthor").value=x?.author||"";
-  $("artKind").value=x?.kind||"مقال علمي";
-  $("artContainer").value=x?.container||x?.publisher||"";
-  $("artReadingStatus").value=x?.readingStatus||"unread";
-  $("artYear").value=x?.year||"";
-  $("artIssue").value=x?.issue||"";
-  $("artPages").value=x?.pages||"";
-  $("artDomain").value=x?.domain||"";
-  $("artLanguage").value=x?.language||"العربية";
-  $("artUrl").value=x?.url||"";
-  $("artKeywords").value=x?.keywords||"";
-  $("artNotes").value=x?.notes||x?.details||"";
-  $("articleModalTitle").textContent=x?t("تعديل بيانات المقال أو الدراسة","Modifier l'article ou l'étude"):t("إضافة مقال أو دراسة","Ajouter un article ou une étude");
+  $("articleId").value="";
+  if(id){
+    const a=state.articles.find(x=>x.id===id);
+    if(a){
+      $("articleId").value=a.id;
+      $("artTitle").value=a.title||"";
+      $("artAuthor").value=a.author||"";
+      $("artKind").value=a.kind||"مقال علمي";
+      $("artContainer").value=a.container||"";
+      $("artReadingStatus").value=a.readingStatus||"unread";
+      $("artYear").value=a.year||"";
+      $("artIssue").value=a.issue||"";
+      $("artPages").value=a.pages||"";
+      $("artDomain").value=a.domain||"";
+      $("artLanguage").value=a.language||"العربية";
+      $("artUrl").value=a.url||"";
+      $("artKeywords").value=a.keywords||"";
+      $("artNotes").value=a.notes||"";
+    }
+  }
   $("articleModal").classList.add("show");
-}
-function closeArticleModal(){$("articleModal")?.classList.remove("show")}
-window.openArticleModal=openArticleModal;
-window.closeArticleModal=closeArticleModal;
-
-function saveArticle(e){
+};
+window.closeArticleModal=function(){const m=$("articleModal");if(m)m.classList.remove("show");};
+window.saveArticle=function(e){
   e.preventDefault();
   const title=$("artTitle").value.trim();
-  if(!title){toast(t("عنوان المقال مطلوب","Le titre de l'article est obligatoire"));return}
-  const id=$("articleId").value||("article-"+Date.now()+"-"+Math.random().toString(36).slice(2,6));
-  const author=$("artAuthor").value.trim();
-  if(author&&!state.authors.some(a=>String(a.name||a.title||"").trim().toLocaleLowerCase()===author.toLocaleLowerCase())){
-    state.authors.push({id:"author-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),name:author,title:author,details:""});
-  }
-  const item={
-    id,title,author,
+  if(!title)return;
+  const rec={
+    id:$("articleId").value||("ar_"+Date.now()),
+    title,
+    author:$("artAuthor").value.trim(),
     kind:$("artKind").value,
     container:$("artContainer").value.trim(),
     readingStatus:$("artReadingStatus").value,
@@ -906,522 +1057,113 @@ function saveArticle(e){
     keywords:$("artKeywords").value.trim(),
     notes:$("artNotes").value.trim()
   };
-  const idx=state.articles.findIndex(a=>a.id===id);
-  if(idx>=0)state.articles[idx]={...state.articles[idx],...item};
-  else state.articles.push(item);
+  const idx=state.articles.findIndex(x=>x.id===rec.id);
+  if(idx>=0)state.articles[idx]=rec;
+  else state.articles.push(rec);
   save();
-  closeArticleModal();
-  setPage("articles");
-  toast(t("تم حفظ المقال بنجاح","Article enregistré avec succès"));
-}
-window.saveArticle=saveArticle;
-
-function deleteArticle(id){
-  const x=state.articles.find(a=>a.id===id);
-  if(!x)return;
-  if(!confirm(t(`حذف المقال «${x.title||""}»؟`,`Supprimer l'article « ${x.title||""} » ?`)))return;
-  state.articles=state.articles.filter(a=>a.id!==id);
-  save();render();
-  toast(t("تم حذف المقال","Article supprimé"));
-}
-window.deleteArticle=deleteArticle;
-
-function viewArticle(id){
-  const x=state.articles.find(a=>a.id===id);
-  if(!x)return;
-  $("detailModalTitle").textContent=x.title||t("تفاصيل المقال","Détails de l'article");
-  const safeUrl=/^https?:\/\//i.test(String(x.url||"").trim())?String(x.url).trim():"";
-  $("detailModalBody").innerHTML=`<div class="detail-grid">
-    <div class="detail-item"><b>${t("الكاتب / الباحث","Auteur")}</b><span>${esc(x.author||"—")}</span></div>
-    <div class="detail-item"><b>${t("حالة الاطلاع","État de lecture")}</b><span>${statusBadge(x.readingStatus)}</span></div>
-    <div class="detail-item"><b>${t("نوع العمل","Type")}</b><span>${esc(x.kind||"—")}</span></div>
-    <div class="detail-item"><b>${t("الوعاء الحاضن","Source")}</b><span>${esc(x.container||x.publisher||"—")}</span></div>
-    <div class="detail-item"><b>${t("السنة والعدد والصفحات","Année, numéro et pages")}</b><span>${esc([x.year,x.issue,x.pages?`${t("ص.","p.")} ${x.pages}`:""].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("المجال واللغة","Domaine et langue")}</b><span>${esc([x.domain,x.language].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item full"><b>${t("الرابط أو DOI","Lien ou DOI")}</b><span>${safeUrl?`<a href="${esc(safeUrl)}" target="_blank" rel="noopener noreferrer">${esc(safeUrl)}</a>`:esc(x.url||"—")}</span></div>
-    <div class="detail-item full"><b>${t("الكلمات المفتاحية","Mots-clés")}</b><span>${esc(x.keywords||"—")}</span></div>
-    <div class="detail-item full"><b>${t("الملخص والملاحظات","Résumé et notes")}</b><span>${esc(x.notes||x.details||"—")}</span></div>
-  </div>`;
-  $("detailModalActions").innerHTML=`<button class="primary" type="button" onclick="window.closeDetailModal();window.openArticleModal('${esc(x.id)}')">${t("تعديل المقال","Modifier")}</button><button class="outline" type="button" onclick="window.closeDetailModal()">${t("إغلاق","Fermer")}</button>`;
-  $("detailModal").classList.add("show");
-}
-window.viewArticle=viewArticle;
-
-function closeDetailModal(){$("detailModal")?.classList.remove("show")}
-window.closeDetailModal=closeDetailModal;
-
-function periodicalsView(){
-  const rows=state.periodicals.slice().sort((a,b)=>String(b.year||"").localeCompare(String(a.year||""))||String(a.title||"").localeCompare(String(b.title||"")));
-  return `<h2 class="section-title">${t("فضاء المجلات والدوريات","Espace des revues et périodiques")}</h2><p class="muted" style="margin:-8px 0 18px">${t("سجّل كل عدد أو إصدار على حدة، وانقر على العنوان لمعاينة كامل بطاقته.","Enregistrez chaque numéro séparément et cliquez sur le titre pour voir sa fiche complète.")}</p><div class="toolbar"><input id="periodicalSearch" class="search" oninput="window.filterPeriodicals(this.value)" placeholder="${t("ابحث باسم المجلة أو رقم العدد أو السنة أو الناشر...","Rechercher par revue, numéro, année ou éditeur...")}"><button class="primary" type="button" onclick="window.openPeriodical()">＋ ${t("إضافة عدد / إصدار","Ajouter un numéro")}</button></div><div class="panel"><div class="panel-head"><h3>${t("الأعداد والإصدارات المسجلة","Numéros enregistrés")} (${rows.length})</h3><span class="tag">${t("كل سجل يمثل عددا واحدا","Une fiche par numéro")}</span></div><div id="periodicalResults">${periodicalTable(rows)}</div></div><div class="modal" id="periodicalModal"><div class="modal-box"><div class="modal-head"><h3 id="periodicalModalTitle">${t("إضافة عدد جديد","Ajouter un numéro")}</h3><button class="close" type="button" onclick="window.closePeriodical()">×</button></div><form id="periodicalForm" onsubmit="window.savePeriodical(event)"><input type="hidden" id="periodicalId"><div class="form-grid">
-${periodicalField("journalName","اسم المجلة أو الدورية","Nom de la revue ou du périodique","text",true)}<datalist id="periodicalNames">${[...new Set(state.periodicals.map(x=>x.journalName||x.title).filter(Boolean))].map(n=>`<option value="${esc(n)}"></option>`).join("")}</datalist>
-${periodicalField("issueTitle","عنوان العدد / الملف (اختياري)","Titre du numéro / dossier (facultatif)")}
-${periodicalField("issueNumber","رقم العدد","Numéro")}
-${periodicalField("volume","المجلد / السنة المجلدية","Volume")}
-${periodicalField("year","سنة الإصدار","Année de publication")}
-<div class="form-group"><label>${t("شهر الإصدار","Mois de publication")}</label><select id="periodicalMonth"><option value="">${t("— اختر الشهر —","— Choisir —")}</option>${(ar()?["يناير","فبراير","مارس","أبريل","ماي","يونيو","يوليوز","غشت","شتنبر","أكتوبر","نونبر","دجنبر"]:["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]).map((m,i)=>`<option value="${i+1}">${m}</option>`).join("")}</select></div>
-${periodicalField("publicationDate","تاريخ الإصدار الكامل","Date de publication","date")}
-${periodicalField("publisher","دار النشر","Éditeur")}
-${periodicalField("issn","الرقم الدولي الموحد للدوريات ISSN","ISSN")}
-${periodicalField("place","مكان النشر","Lieu de publication")}
-<div class="form-group"><label>${t("لغة الإصدار","Langue")}</label><select id="periodicalLanguage"><option value="">${t("— غير محددة —","— Non précisée —")}</option><option>العربية</option><option>الفرنسية</option><option>الإنجليزية</option><option>الإسبانية</option><option>الأمازيغية</option><option>متعددة اللغات</option></select></div>
-<div class="form-group"><label>${t("دورية الصدور","Périodicité")}</label><select id="periodicalFrequency"><option value="">${t("— غير محددة —","— Non précisée —")}</option>${(ar()?["يومية","أسبوعية","نصف شهرية","شهرية","كل شهرين","فصلية","نصف سنوية","سنوية","غير منتظمة"]:["Quotidienne","Hebdomadaire","Bimensuelle","Mensuelle","Bimestrielle","Trimestrielle","Semestrielle","Annuelle","Irrégulière"]).map(x=>`<option>${x}</option>`).join("")}</select></div>
-${periodicalField("category","المجال / التخصص","Domaine / spécialité")}
-${periodicalField("pages","عدد الصفحات","Nombre de pages","number")}
-${periodicalField("shelf","مكان الحفظ / رقم الرف","Emplacement / cote")}
-<div class="form-group full"><label>${t("ملاحظات إضافية","Notes complémentaires")}</label><textarea id="periodicalNotes" rows="3"></textarea></div></div><div class="form-actions"><button class="primary" type="submit">${t("حفظ بيانات العدد","Enregistrer le numéro")}</button><button class="outline" type="button" onclick="window.closePeriodical()">${t("إلغاء","Annuler")}</button></div></form></div></div>`;
-}
-
-function filterPeriodicals(value){
-  const q=String(value||"").toLocaleLowerCase();
-  const rows=state.periodicals.slice().sort((a,b)=>String(b.year||"").localeCompare(String(a.year||""))||String(a.title||"").localeCompare(String(b.title||"")));
-  const filtered=rows.filter(x=>[x.journalName,x.title,x.issueTitle,x.issueNumber,x.volume,x.year,x.month,x.publisher,x.issn,x.category,x.place,x.language,x.frequency,x.shelf,x.notes].join(" ").toLocaleLowerCase().includes(q));
-  const target=$("periodicalResults");
-  if(target)target.innerHTML=periodicalTable(filtered);
-}
-window.filterPeriodicals=filterPeriodicals;
-
-function periodicalField(id,arLabel,frLabel,type="text",required=false){
-  return `<div class="form-group"><label>${t(arLabel,frLabel)}${required?" *":""}</label><input id="periodical${id[0].toUpperCase()+id.slice(1)}" type="${type}" ${required?"required":""} ${id==="journalName"?'list="periodicalNames" autocomplete="on"':""}></div>`;
-}
-function periodicalTable(items){
-  if(!items.length)return `<div class="empty"><div class="big">▧</div>${t("لا توجد أعداد مسجلة بعد. ابدأ بإضافة أول عدد من مجلاتك.","Aucun numéro enregistré. Ajoutez le premier numéro de votre collection.")}</div>`;
-  return `<div class="table-wrap"><table><thead><tr><th>${t("المجلة / الدورية","Revue")}</th><th>${t("العدد والمجلد","Numéro et volume")}</th><th>${t("تاريخ الإصدار","Publication")}</th><th>${t("الناشر وISSN","Éditeur et ISSN")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>${items.map(x=>`<tr>
-    <td><button type="button" class="title-link" onclick="window.viewPeriodical('${esc(x.id)}')">${esc(x.journalName||x.title||"—")}</button><div class="muted">${esc(x.issueTitle||"")}</div></td>
-    <td data-label="${t("العدد والمجلد","Numéro et volume")}">${esc(x.issueNumber||"—")} <span class="muted">· ${t("مجلد","Vol.")} ${esc(x.volume||"—")}</span></td>
-    <td data-label="${t("تاريخ الإصدار","Publication")}">${esc(x.month||"")} ${esc(x.year||"—")}<div class="muted">${esc(x.publicationDate||"")}</div></td>
-    <td data-label="${t("الناشر وISSN","Éditeur et ISSN")}">${esc(x.publisher||"—")}<div class="muted">${esc(x.issn||"")}</div></td>
-    <td data-label="${t("إجراءات","Actions")}"><div class="actions"><button class="mini" type="button" onclick="window.viewPeriodical('${esc(x.id)}')">${t("عرض","Voir")}</button><button class="mini" type="button" onclick="window.editPeriodical('${esc(x.id)}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deletePeriodical('${esc(x.id)}')">${t("حذف","Supprimer")}</button></div></td>
-  </tr>`).join("")}</tbody></table></div>`;
-}
-
-function viewPeriodical(id){
-  const x=state.periodicals.find(p=>p.id===id);
-  if(!x)return;
-  $("detailModalTitle").textContent=`${x.journalName||x.title||""}${x.issueNumber?` — ${t("عدد","n°")} ${x.issueNumber}`:""}`;
-  $("detailModalBody").innerHTML=`<div class="detail-grid">
-    <div class="detail-item"><b>${t("المجلة / الدورية","Revue")}</b><span>${esc(x.journalName||x.title||"—")}</span></div>
-    <div class="detail-item"><b>${t("عنوان العدد / الملف","Titre du numéro")}</b><span>${esc(x.issueTitle||"—")}</span></div>
-    <div class="detail-item"><b>${t("العدد والمجلد","Numéro et volume")}</b><span>${esc([x.issueNumber?`${t("العدد","N°")} ${x.issueNumber}`:"",x.volume?`${t("المجلد","Vol.")} ${x.volume}`:""].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("تاريخ الإصدار","Date de publication")}</b><span>${esc([x.month,x.year,x.publicationDate].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("الناشر ومكان النشر","Éditeur et lieu")}</b><span>${esc([x.publisher,x.place].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>ISSN</b><span>${esc(x.issn||"—")}</span></div>
-    <div class="detail-item"><b>${t("اللغة والدورية","Langue et périodicité")}</b><span>${esc([x.language,x.frequency].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item"><b>${t("التخصص والصفحات والرف","Domaine, pages et cote")}</b><span>${esc([x.category,x.pages?`${x.pages} ${t("ص.","p.")}`:"",x.shelf].filter(Boolean).join(" · ")||"—")}</span></div>
-    <div class="detail-item full"><b>${t("ملاحظات إضافية","Notes")}</b><span>${esc(x.notes||"—")}</span></div>
-  </div>`;
-  $("detailModalActions").innerHTML=`<button class="primary" type="button" onclick="window.closeDetailModal();window.editPeriodical('${esc(x.id)}')">${t("تعديل العدد","Modifier")}</button><button class="outline" type="button" onclick="window.closeDetailModal()">${t("إغلاق","Fermer")}</button>`;
-  $("detailModal").classList.add("show");
-}
-window.viewPeriodical=viewPeriodical;
-
-function openPeriodical(id=""){
-  const x=id?state.periodicals.find(p=>p.id===id):null;
-  $("periodicalForm").reset();
-  $("periodicalId").value=x?.id||"";
-  const fields=["journalName","issueTitle","issueNumber","volume","year","publicationDate","publisher","issn","place","language","frequency","category","pages","shelf","notes"];
-  const map={journalName:x?.journalName||x?.title||"",issueTitle:x?.issueTitle||"",issueNumber:x?.issueNumber||"",volume:x?.volume||"",year:x?.year||"",publicationDate:x?.publicationDate||"",publisher:x?.publisher||"",issn:x?.issn||"",place:x?.place||"",language:x?.language||"",frequency:x?.frequency||"",category:x?.category||"",pages:x?.pages||"",shelf:x?.shelf||"",notes:x?.notes||x?.details||""};
-  fields.forEach(k=>{const el=$("periodical"+k[0].toUpperCase()+k.slice(1));if(el)el.value=map[k]});
-  $("periodicalMonth").value=x?.monthNumber||"";
-  if(x?.month&&!x.monthNumber){
-    const opts=[...$("periodicalMonth").options];
-    const m=opts.find(o=>o.text===x.month);
-    if(m)$("periodicalMonth").value=m.value;
-  }
-  $("periodicalModalTitle").textContent=x?t("تعديل بيانات العدد","Modifier le numéro"):t("إضافة عدد جديد","Ajouter un numéro");
-  $("periodicalModal").classList.add("show");
-}
-function closePeriodical(){$("periodicalModal")?.classList.remove("show")}
-function editPeriodical(id){openPeriodical(id)}
-function savePeriodical(e){
-  e.preventDefault();
-  const id=$("periodicalId").value||("periodical-"+Date.now()+"-"+Math.random().toString(36).slice(2,6));
-  const monthSel=$("periodicalMonth"),monthNumber=monthSel.value,month=monthNumber?monthSel.selectedOptions[0]?.text||"":"";
-  const journalName=$("periodicalJournalName").value.trim();
-  if(!journalName){toast(t("اسم المجلة مطلوب","Le nom de la revue est obligatoire"));return}
-  const item={id,journalName,title:journalName,issueTitle:$("periodicalIssueTitle").value.trim(),issueNumber:$("periodicalIssueNumber").value.trim(),volume:$("periodicalVolume").value.trim(),year:$("periodicalYear").value.trim(),month,monthNumber,publicationDate:$("periodicalPublicationDate").value,publisher:$("periodicalPublisher").value.trim(),issn:$("periodicalIssn").value.trim(),place:$("periodicalPlace").value.trim(),language:$("periodicalLanguage").value,frequency:$("periodicalFrequency").value,category:$("periodicalCategory").value.trim(),pages:$("periodicalPages").value,shelf:$("periodicalShelf").value.trim(),notes:$("periodicalNotes").value.trim()};
-  const i=state.periodicals.findIndex(x=>x.id===id);
-  if(i>=0)state.periodicals[i]={...state.periodicals[i],...item};
-  else state.periodicals.push(item);
-  save();closePeriodical();render();
-  toast(t("تم حفظ بيانات العدد بنجاح","Numéro enregistré avec succès"));
-}
-function deletePeriodical(id){
-  const x=state.periodicals.find(p=>p.id===id);
-  if(!x)return;
-  if(!confirm(t(`حذف هذا العدد من ${x.journalName||x.title||"المجلة"}؟`,`Supprimer ce numéro de ${x.journalName||x.title||"la revue"} ?`)))return;
-  state.periodicals=state.periodicals.filter(p=>p.id!==id);
-  save();render();
-  toast(t("تم حذف العدد","Numéro supprimé"));
-}
-window.openPeriodical=openPeriodical;
-window.closePeriodical=closePeriodical;
-window.editPeriodical=editPeriodical;
-window.savePeriodical=savePeriodical;
-window.deletePeriodical=deletePeriodical;
-
-function recordTable(key,items){
-  if(!items.length)return `<div class="empty"><div class="big">♙</div>${t("لا توجد سجلات بعد. استخدم زر الإضافة للبدء.","Aucun enregistrement. Utilisez le bouton Ajouter pour commencer.")}</div>`;
-  return `<div class="table-wrap"><table><thead><tr><th>${t("الاسم","Nom")}</th><th>${t("الكتب المرتبطة","Livres associés")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>${items.map(x=>{
-    const n=state.books.filter(b=>(b.authorIds||[]).includes(x.id)||(!b.authorIds&&String(b.author||"").toLowerCase()===String(x.name||x.title||"").toLowerCase())).length;
-    return `<tr><td><strong>${esc(x.title||x.name||"")}</strong></td><td data-label="${t("الكتب المرتبطة","Livres associés")}">${n} ${t("كتاب","livre(s)")} · ${esc(x.details||"—")}</td><td data-label="${t("إجراءات","Actions")}"><div class="actions"><button class="mini" type="button" onclick="window.editRecord('${key}','${esc(x.id)}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deleteRecord('${key}','${esc(x.id)}')">${t("حذف","Supprimer")}</button></div></td></tr>`;
-  }).join("")}</tbody></table></div>`;
-}
-function addRecord(key,id){
-  let old=id?state[key].find(x=>x.id===id):null;
-  let first=prompt(t("اسم المؤلف:","Nom de l’auteur :"),old?(old.title||old.name||""):"");
-  if(first===null||!first.trim())return;
-  const clean=first.trim();
-  if(state.authors.some(x=>x.id!==id&&String(x.name||x.title||"").trim().toLowerCase()===clean.toLowerCase())){toast(t("هذا المؤلف مسجل بالفعل","Cet auteur existe déjà"));return}
-  let second=prompt(t("معلومات أو ملاحظات (اختياري):","Informations ou notes (facultatif) :"),old?(old.details||""):"");
-  if(second===null)return;
-  let item={...(old||{}),id:old?old.id:String(Date.now())+(Math.random().toString(36).slice(2,6)),name:clean,title:clean,details:second.trim()};
-  if(old)state[key]=state[key].map(x=>x.id===id?item:x);
-  else state[key].push(item);
-  save();render();
-  toast(t("تم حفظ السجل","Enregistrement sauvegardé"));
-}
-function editRecord(key,id){addRecord(key,id)}
-function deleteRecord(key,id){
-  const linked=state.books.filter(b=>(b.authorIds||[]).includes(id));
-  if(!confirm(t(`حذف المؤلف؟ ستبقى الكتب (${linked.length}) محفوظة، مع إزالة هذا الربط من سجل المؤلفين.`,`Supprimer cet auteur ? Les ${linked.length} livre(s) seront conservés, mais le lien sera retiré.`)))return;
-  linked.forEach(b=>{
-    b.authorIds=(b.authorIds||[]).filter(x=>x!==id);
-    b.author=b.authorIds.map(aid=>state.authors.find(a=>a.id===aid)).filter(Boolean).map(a=>a.name||a.title).join("، ");
-  });
-  state[key]=state[key].filter(x=>x.id!==id);
-  save();render();
-  toast(t("تم حذف السجل","Enregistrement supprimé"));
-}
-window.addRecord=addRecord;
-window.editRecord=editRecord;
-window.deleteRecord=deleteRecord;
-
-function bookAuthorNames(book){
-  const ids=Array.isArray(book.authorIds)?book.authorIds:[];
-  if(ids.length){
-    const names=ids.map(id=>state.authors.find(a=>a.id===id)).filter(Boolean).map(a=>a.name||a.title);
-    if(names.length)return names;
-  }
-  return String(book.author||"").split(/[,،;؛]/).map(x=>x.trim()).filter(Boolean);
-}
-let currentBookAuthorIds=[];
-function selectedAuthorIds(){return [...currentBookAuthorIds]}
-function renderAuthorPicker(selected=currentBookAuthorIds){
-  currentBookAuthorIds=[...new Set(selected)];
-  const box=$("authorChoices"),list=$("authorSuggestions");
-  if(!box||!list)return;
-  list.innerHTML=state.authors.map(a=>`<option value="${esc(a.name||a.title||"")}"></option>`).join("");
-  const rows=currentBookAuthorIds.map(id=>state.authors.find(a=>a.id===id)).filter(Boolean);
-  box.innerHTML=rows.length?rows.map(a=>`<span class="tag" style="display:inline-flex;align-items:center;gap:7px;margin:3px">${esc(a.name||a.title||"")} <button type="button" class="mini" style="padding:1px 6px;min-height:auto" aria-label="${t("إزالة المؤلف","Retirer l’auteur")}" onclick="window.removeAuthorFromBook('${esc(a.id)}')">×</button></span>`).join(""):`<span class="muted">${t("لم تتم إضافة أي مؤلف إلى هذا الكتاب بعد.","Aucun auteur n’a encore été associé à ce livre.")}</span>`;
-}
-function addAuthorToBook(){
-  const input=$("authorSearch"),name=input.value.trim();
-  if(!name)return;
-  const found=state.authors.find(a=>String(a.name||a.title||"").trim().toLocaleLowerCase()===name.toLocaleLowerCase());
-  if(found){
-    if(!currentBookAuthorIds.includes(found.id))currentBookAuthorIds.push(found.id);
-    else toast(t("هذا المؤلف مضاف إلى الكتاب بالفعل","Cet auteur est déjà associé à ce livre"));
-    input.value="";renderAuthorPicker();return;
-  }
-  const create=confirm(t("هذا الاسم غير مسجل. هل تريد تسجيله كمؤلف جديد وإضافته إلى الكتاب؟","Ce nom n’est pas enregistré. Voulez-vous créer cet auteur et l’ajouter au livre ?"));
-  if(create){
-    const item={id:"author-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),name,title:name,details:""};
-    state.authors.push(item);currentBookAuthorIds.push(item.id);save();
-    input.value="";renderAuthorPicker();
-    toast(t("تم تسجيل المؤلف وربطه بالكتاب","Auteur enregistré et associé au livre"));
-  }
-}
-function removeAuthorFromBook(id){currentBookAuthorIds=currentBookAuthorIds.filter(x=>x!==id);renderAuthorPicker()}
-function quickAddAuthor(){
-  const name=prompt(t("اسم المؤلف الجديد:","Nom du nouvel auteur :"));
-  if(!name||!name.trim())return;
-  const clean=name.trim();
-  let found=state.authors.find(a=>String(a.name||a.title||"").trim().toLowerCase()===clean.toLowerCase());
-  if(found){
-    if(!currentBookAuthorIds.includes(found.id))currentBookAuthorIds.push(found.id);
-    toast(t("المؤلف مسجل بالفعل، تمت إضافته إلى الكتاب","Auteur déjà enregistré et associé au livre"));
-  }else{
-    const item={id:"author-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),name:clean,title:clean,details:""};
-    state.authors.push(item);currentBookAuthorIds.push(item.id);save();
-    toast(t("تم تسجيل المؤلف وربطه بالكتاب","Auteur enregistré et associé au livre"));
-  }
-  $("authorSearch").value="";renderAuthorPicker();
-}
-window.addAuthorToBook=addAuthorToBook;
-window.removeAuthorFromBook=removeAuthorFromBook;
-window.quickAddAuthor=quickAddAuthor;
-
-function filterBooks(){
-  let q=$("bookSearch").value.toLowerCase(),f=$("bookFilter").value,lang=$("bookLanguageFilter").value,st=$("bookStatusFilter").value;
-  let all=state.books.filter(b=>b.kind!=="كتاب جيب");
-  let list=all.filter(b=>{
-    let kindOk=!f||b.kind===f||(f==="جزء من سلسلة"&&b.kind==="كتاب ضمن سلسلة");
-    let langOk=lang==="all"||(lang==="ar"&&isArabicLanguage(b.language))||(lang==="foreign"&&!isArabicLanguage(b.language));
-    let stOk=st==="all"||(b.readingStatus||"unread")===st;
-    let textOk=[b.title,bookAuthorNames(b).join(" "),b.author,b.topic,b.domain,b.publisher,b.shelf,b.keywords].join(" ").toLowerCase().includes(q);
-    return kindOk&&langOk&&stOk&&textOk;
-  });
-  $("bookResults").innerHTML=bookTable(list);
-  let arCount=all.filter(b=>isArabicLanguage(b.language)).length,foreignCount=all.length-arCount,readCount=all.filter(b=>b.readingStatus==="read").length;
-  $("bookCounts").innerHTML=`<span class="count-chip">${t("مجموع الكتب","Total des livres")} <b>${all.length}</b></span><span class="count-chip">${t("العربية","Arabe")} <b>${arCount}</b></span><span class="count-chip">${t("اللغات الأجنبية","Langues étrangères")} <b>${foreignCount}</b></span><span class="count-chip">${t("المقروءة","Lus")} <b>${readCount}</b></span>`;
-}
-
-function seriesTable(){
-  if(!state.series.length)return `<div class="empty"><div class="big">▥</div>${t("لم تسجل أي سلسلة بعد. أضف أول سلسلة للبدء.","Aucune collection. Ajoutez votre première collection.")}</div>`;
-  return `<div class="table-wrap"><table><thead><tr><th>${t("اسم السلسلة","Nom de la collection")}</th><th>${t("عدد الأجزاء","Volumes")}</th><th>${t("الوصف","Description")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>${state.series.map(x=>{
-    const z=typeof x==="string"?{id:x,name:x}:x;
-    const n=state.books.filter(b=>b.seriesId===z.id||(!b.seriesId&&b.series===z.name)).length;
-    return `<tr><td><strong>${esc(z.name)}</strong></td><td data-label="${t("عدد الأجزاء","Volumes")}">${n}</td><td data-label="${t("الوصف","Description")}">${esc(z.description||"—")}</td><td data-label="${t("إجراءات","Actions")}"><div class="actions"><button class="mini" type="button" onclick="window.editSeries('${esc(z.id)}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deleteSeries('${esc(z.id)}')">${t("حذف","Supprimer")}</button></div></td></tr>`;
-  }).join("")}</tbody></table></div>`;
-}
-function addSeries(){
-  const name=prompt(t("اكتب اسم السلسلة:","Nom de la collection :"));
-  if(!name||!name.trim())return;
-  const clean=name.trim();
-  if(state.series.some(x=>(typeof x==="string"?x:x.name).toLowerCase()===clean.toLowerCase())){toast(t("هذه السلسلة مسجلة بالفعل","Cette collection existe déjà"));return}
-  state.series.push({id:String(Date.now()),name:clean,description:""});
-  save();render();toast(t("تمت إضافة السلسلة","Collection ajoutée"));
-}
-function editSeries(id){
-  const x=state.series.find(x=>(typeof x==="string"?x:x.id)===id);
-  if(!x)return;
-  const old=typeof x==="string"?x:x.name;
-  const name=prompt(t("تعديل اسم السلسلة:","Modifier le nom :"),old);
-  if(!name||!name.trim())return;
-  const clean=name.trim();
-  state.books.forEach(b=>{if(b.series===old||b.seriesId===id)b.series=clean});
-  const idx=state.series.indexOf(x);
-  state.series[idx]=typeof x==="string"?{id,name:clean,description:""}:{...x,name:clean};
-  save();render();toast(t("تم تحديث السلسلة","Collection mise à jour"));
-}
-function deleteSeries(id){
-  const x=state.series.find(x=>(typeof x==="string"?x:x.id)===id);
-  if(!x)return;
-  if(!confirm(t("حذف السلسلة من الفهرس؟ لن تحذف الكتب المرتبطة بها.","Supprimer la collection ? Les livres associés seront conservés.")))return;
-  state.books.forEach(b=>{if(b.seriesId===id)b.seriesId=""});
-  state.series=state.series.filter(y=>y!==x);
-  save();render();toast(t("تم حذف السلسلة مع الاحتفاظ بالكتب واسم السلسلة في بطاقاتها","Collection supprimée ; livres et intitulés conservés"));
-}
-function openSeriesVolume(){openBook();$("kind").disabled=false;$("kind").value="جزء من سلسلة";$("modalTitle").textContent=t("إضافة جزء إلى سلسلة","Ajouter un volume à une collection")}
-function openPocketBook(){openBook();$("kind").value="كتاب جيب";$("kind").disabled=true;$("modalTitle").textContent=t("إضافة كتاب جيب","Ajouter un livre de poche")}
-window.addSeries=addSeries;
-window.editSeries=editSeries;
-window.deleteSeries=deleteSeries;
-window.openSeriesVolume=openSeriesVolume;
-window.openPocketBook=openPocketBook;
-
-function globalSearch(){
-  const q=$("globalSearch").value.trim().toLowerCase(),out=$("globalResults");
-  if(!q){out.innerHTML=`<p class="muted">${t("ابدأ الكتابة لعرض النتائج الفورية من جميع فضاءات المكتبة.","Commencez à saisir pour afficher les résultats instantanés.")}</p>`;return}
-  const books=state.books.filter(b=>[b.title,bookAuthorNames(b).join(" "),b.author,b.topic,b.domain,b.publisher,b.shelf,b.keywords,b.series].join(" ").toLowerCase().includes(q)).slice(0,15);
-  const periodicals=state.periodicals.filter(p=>[p.journalName,p.title,p.issueTitle,p.issueNumber,p.year,p.publisher,p.category].join(" ").toLowerCase().includes(q)).slice(0,10);
-  const articles=state.articles.filter(a=>[a.title,a.author,a.container,a.kind,a.domain,a.keywords,a.notes].join(" ").toLowerCase().includes(q)).slice(0,15);
-  const series=state.series.filter(x=>(typeof x==="string"?x:x.name).toLowerCase().includes(q)).slice(0,8);
-  const authors=state.authors.filter(a=>String(a.name||a.title||"").toLowerCase().includes(q)).slice(0,8);
-  let html="";
-  if(books.length)html+=`<h4>${t("الكتب","Livres")}</h4>${books.map(b=>`<button type="button" class="result-row" onclick="window.viewBook('${esc(b.id)}')"><b>${esc(b.title)}</b><span>${esc(bookAuthorNames(b).join("، ")||b.author||"—")} · ${esc(b.kind||"كتاب")}</span></button>`).join("")}`;
-  if(periodicals.length)html+=`<h4>${t("المجلات والدوريات","Revues et périodiques")}</h4>${periodicals.map(p=>`<button type="button" class="result-row" onclick="window.viewPeriodical('${esc(p.id)}')"><b>${esc(p.journalName||p.title)}</b><span>${esc([p.issueNumber?`${t("ع.","n°")} ${p.issueNumber}`:"",p.year].filter(Boolean).join(" · ")||"—")}</span></button>`).join("")}`;
-  if(articles.length)html+=`<h4>${t("المقالات والدراسات","Articles et études")}</h4>${articles.map(a=>`<button type="button" class="result-row" onclick="window.viewArticle('${esc(a.id)}')"><b>${esc(a.title)}</b><span>${esc(a.author||"—")} · ${esc(a.container||a.kind||"مقال")}</span></button>`).join("")}`;
-  if(series.length)html+=`<h4>${t("السلاسل","Collections")}</h4>${series.map(x=>{const n=typeof x==="string"?x:x.name;return `<button type="button" class="result-row" onclick="window.setPage('collections')"><b>${esc(n)}</b><span>${t("سلسلة","Collection")}</span></button>`}).join("")}`;
-  if(authors.length)html+=`<h4>${t("المؤلفون","Auteurs")}</h4>${authors.map(a=>`<button type="button" class="result-row" onclick="window.setPage('authors')"><b>${esc(a.name||a.title)}</b><span>${t("مؤلف","Auteur")}</span></button>`).join("")}`;
-  out.innerHTML=html||`<p class="muted">${t("لا توجد نتائج مطابقة.","Aucun résultat correspondant.")}</p>`;
-}
-
-function normalizePublisher(s){return String(s||"").trim().replace(/\s+/g," ").toLocaleLowerCase()}
-function publisherTable(){
-  if(!state.publishers.length)return `<div class="empty"><div class="big">▤</div>${t("لم تسجل دور نشر بعد. ستظهر هنا الدور التي تحفظها.","Aucun éditeur enregistré pour le moment.")}</div>`;
-  return `<div class="table-wrap"><table><thead><tr><th>${t("دار النشر","Éditeur")}</th><th>${t("الكتب المرتبطة","Livres associés")}</th><th>${t("إجراءات","Actions")}</th></tr></thead><tbody>${state.publishers.map(x=>{
-    const n=state.books.filter(b=>b.publisherId===x.id||(!b.publisherId&&normalizePublisher(b.publisher)===normalizePublisher(x.name))).length;
-    return `<tr><td><strong>${esc(x.name)}</strong></td><td data-label="${t("الكتب المرتبطة","Livres associés")}">${n}</td><td data-label="${t("إجراءات","Actions")}"><div class="actions"><button class="mini" type="button" onclick="window.editPublisher('${esc(x.id)}')">${t("تعديل","Modifier")}</button><button class="mini del" type="button" onclick="window.deletePublisher('${esc(x.id)}')">${t("حذف","Supprimer")}</button></div></td></tr>`;
-  }).join("")}</tbody></table></div>`;
-}
-function refreshPublisherSuggestions(){
-  const dl=$("publisherSuggestions");
-  if(!dl)return;
-  dl.innerHTML=state.publishers.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(x=>`<option value="${esc(x.name)}"></option>`).join("");
-  updatePublisherStatus();
-}
-function updatePublisherStatus(){
-  const input=$("publisher"),status=$("publisherStatus"),btn=$("savePublisherBtn");
-  if(!input||!status||!btn)return;
-  const value=input.value.trim(),found=state.publishers.find(x=>normalizePublisher(x.name)===normalizePublisher(value));
-  if(found){status.textContent=t("دار محفوظة — ستُربط بالكتاب تلقائيا.","Éditeur enregistré — associé automatiquement.");btn.classList.add("hidden")}
-  else if(value){status.textContent=t("دار جديدة — يمكنك حفظها لإعادة استخدامها لاحقا.","Nouvel éditeur — enregistrez-le pour le réutiliser.");btn.classList.remove("hidden")}
-  else{status.textContent=t("يمكنك الاختيار من الاقتراحات أو حفظ دار جديدة.","Choisissez une suggestion ou enregistrez un nouvel éditeur.");btn.classList.remove("hidden")}
-}
-function savePublisherFromInput(){
-  const input=$("publisher"),name=input.value.trim();
-  if(!name){toast(t("اكتب اسم دار النشر أولا","Saisissez d’abord le nom de l’éditeur"));return}
-  let found=state.publishers.find(x=>normalizePublisher(x.name)===normalizePublisher(name));
-  if(found){input.value=found.name;updatePublisherStatus();toast(t("دار النشر محفوظة بالفعل","Cet éditeur est déjà enregistré"));return}
-  const item={id:"publisher-"+Date.now()+Math.random().toString(36).slice(2,6),name};
-  state.publishers.push(item);save();input.value=item.name;refreshPublisherSuggestions();
-  toast(t("تم حفظ دار النشر وإضافتها إلى الاقتراحات","Éditeur enregistré et ajouté aux suggestions"));
-}
-function addPublisher(){
-  const name=prompt(t("اسم دار النشر:","Nom de l’éditeur :"));
-  if(!name||!name.trim())return;
-  const clean=name.trim();
-  if(state.publishers.some(x=>normalizePublisher(x.name)===normalizePublisher(clean))){toast(t("دار النشر مسجلة بالفعل","Cet éditeur existe déjà"));return}
-  state.publishers.push({id:"publisher-"+Date.now()+Math.random().toString(36).slice(2,6),name:clean});
-  save();render();toast(t("تمت إضافة دار النشر","Éditeur ajouté"));
-}
-function editPublisher(id){
-  const item=state.publishers.find(x=>x.id===id);
-  if(!item)return;
-  const name=prompt(t("تعديل اسم دار النشر:","Modifier le nom de l’éditeur :"),item.name);
-  if(!name||!name.trim())return;
-  const clean=name.trim();
-  if(state.publishers.some(x=>x.id!==id&&normalizePublisher(x.name)===normalizePublisher(clean))){toast(t("توجد دار نشر بهذا الاسم بالفعل","Un éditeur portant ce nom existe déjà"));return}
-  const old=item.name;
-  item.name=clean;
-  state.books.forEach(b=>{if(b.publisherId===id||normalizePublisher(b.publisher)===normalizePublisher(old)){b.publisherId=id;b.publisher=clean}});
-  save();render();toast(t("تم تعديل دار النشر وتحديث الكتب المرتبطة بها","Éditeur modifié et livres associés mis à jour"));
-}
-function deletePublisher(id){
-  const item=state.publishers.find(x=>x.id===id);
-  if(!item)return;
-  const linked=state.books.filter(b=>b.publisherId===id||(!b.publisherId&&normalizePublisher(b.publisher)===normalizePublisher(item.name)));
-  if(!confirm(t(`حذف دار النشر من السجل؟ ستبقى الكتب المرتبطة محفوظة مع الاحتفاظ باسم الدار في بطاقاتها (${linked.length} كتاب).`,`Supprimer cet éditeur du répertoire ? Les livres (${linked.length}) seront conservés avec le nom de l’éditeur dans leurs fiches.`)))return;
-  linked.forEach(b=>{if(b.publisherId===id)b.publisherId=""});
-  state.publishers=state.publishers.filter(x=>x.id!==id);
-  save();render();toast(t("حذفت الدار من السجل مع الاحتفاظ ببيانات الكتب","Éditeur supprimé du répertoire, fiches conservées"));
-}
-window.savePublisherFromInput=savePublisherFromInput;
-window.addPublisher=addPublisher;
-window.editPublisher=editPublisher;
-window.deletePublisher=deletePublisher;
-
-function populateSeriesSelect(selectedId="",selectedName=""){
-  const sel=$("series");
-  if(!sel)return;
-  const rows=state.series.map((x,i)=>typeof x==="string"?{id:"legacy-"+i,name:x}:x).filter(x=>x&&x.name);
-  sel.innerHTML=`<option value="">${t("— بدون سلسلة —","— Sans collection —")}</option>`+rows.map(x=>`<option value="${esc(x.id)}">${esc(x.name)}</option>`).join("");
-  let found=rows.find(x=>x.id===selectedId)||rows.find(x=>x.name===selectedName);
-  sel.value=found?found.id:"";
-}
-function openBook(){
-  $("bookForm").reset();
-  setupDomain();
-  populateSeriesSelect();
-  refreshPublisherSuggestions();
-  $("authorSearch").value="";
-  currentBookAuthorIds=[];
-  renderAuthorPicker([]);
-  $("readingStatus").value="unread";
-  $("kind").disabled=false;
-  $("editId").value="";
-  $("modalTitle").textContent=t("إضافة كتاب جديد","Ajouter un livre");
-  $("bookModal").classList.add("show");
-}
-function editBook(id){
-  let b=state.books.find(x=>x.id===id);
-  if(!b)return;
-  openBook();
-  $("editId").value=id;
-  $("kind").disabled=false;
-  for(let k of ["title","language","kind","domain","subdomain","topic","publisher","place","year","edition","pages","isbn","shelf","seriesNo","keywords","notes"])$(k).value=b[k]||"";
-  $("readingStatus").value=b.readingStatus||"unread";
-  populateSeriesSelect(b.seriesId||"",b.series||"");
-  refreshPublisherSuggestions();
-  renderAuthorPicker(Array.isArray(b.authorIds)&&b.authorIds.length?b.authorIds:state.authors.filter(a=>bookAuthorNames(b).some(n=>n.toLowerCase()===String(a.name||a.title||"").toLowerCase())).map(a=>a.id));
-  $("modalTitle").textContent=t("تعديل بيانات الكتاب","Modifier la fiche");
-}
-function deleteBook(id){
-  if(!confirm(t("هل تريد حذف هذا الكتاب؟","Supprimer ce livre ?")))return;
-  state.books=state.books.filter(x=>x.id!==id);
-  save();render();toast(t("تم حذف الكتاب","Livre supprimé"));
-}
-window.openBook=openBook;
-window.editBook=editBook;
-window.deleteBook=deleteBook;
-
-$("bookForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  let id=$("editId").value||String(Date.now())+Math.random().toString(36).slice(2,5);
-  let b={id};
-  $("kind").disabled=false;
-  for(let k of ["title","language","kind","domain","subdomain","topic","publisher","place","year","edition","pages","isbn","shelf","seriesNo","keywords","notes"])b[k]=$(k).value.trim();
-  b.readingStatus=$("readingStatus").value||"unread";
-  const publisherMatch=state.publishers.find(x=>normalizePublisher(x.name)===normalizePublisher(b.publisher));
-  b.publisherId=publisherMatch?publisherMatch.id:"";
-  if(publisherMatch)b.publisher=publisherMatch.name;
-  const authorIds=selectedAuthorIds();
-  b.authorIds=authorIds;
-  b.author=authorIds.map(aid=>state.authors.find(a=>a.id===aid)).filter(Boolean).map(a=>a.name||a.title).join("، ");
-  const sid=$("series").value;
-  const sx=state.series.map((x,i)=>typeof x==="string"?{id:"legacy-"+i,name:x}:x).find(x=>x&&x.id===sid);
-  b.seriesId=sx?sx.id:"";
-  b.series=sx?sx.name:"";
-  let i=state.books.findIndex(x=>x.id===id);
-  if(i>=0)state.books[i]={...state.books[i],...b};
-  else state.books.push(b);
-  save();
-  $("bookModal").classList.remove("show");
-  if(state.page==="home")state.page=(b.kind==="كتاب جيب"||b.kind==="جزء من سلسلة"||b.kind==="كتاب ضمن سلسلة")?"collections":"books";
-  document.querySelectorAll(".nav button").forEach(btn=>btn.classList.toggle("active",btn.dataset.page===state.page));
+  window.closeArticleModal();
   render();
-  toast(t("تم حفظ الكتاب بنجاح","Livre enregistré avec succès"));
-});
+};
+window.deleteArticle=function(id){
+  state.articles=state.articles.filter(a=>a.id!==id);
+  save();
+  render();
+};
+window.showArticleDetail=function(id){
+  const a=state.articles.find(x=>x.id===id);
+  if(!a)return;
+  $("detailModalTitle").textContent=a.title;
+  $("detailModalBody").innerHTML=`<div class="detail-grid"><div class="detail-item"><b>${t("الكاتب","Auteur")}</b><span>${esc(a.author||"—")}</span></div><div class="detail-item"><b>${t("المصدر","Source")}</b><span>${esc(a.container||"—")}</span></div><div class="detail-item full"><b>${t("ملخص","Résumé")}</b><span>${esc(a.notes||"—")}</span></div></div>`;
+  $("detailModalActions").innerHTML=`<button class="outline" type="button" onclick="window.closeDetailModal()">${t("إغلاق","Fermer")}</button>`;
+  $("detailModal").classList.add("show");
+};
 
-$("authorSearch").addEventListener("change",()=>{const v=$("authorSearch").value.trim();if(v)addAuthorToBook()});
-$("authorSearch").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();addAuthorToBook()}});
-$("publisher").addEventListener("input",updatePublisherStatus);
-$("publisher").addEventListener("change",()=>{const m=state.publishers.find(x=>normalizePublisher(x.name)===normalizePublisher($("publisher").value));if(m){$("publisher").value=m.name;updatePublisherStatus()}});
-
-function exportData(){
-  let data=buildPayload();
-  data.exportedAt=new Date().toISOString();
-  let blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
-  let url=URL.createObjectURL(blob);
-  let a=document.createElement("a");
-  a.href=url;
-  a.download="ma-bibliotheque-backup.json";
-  a.click();
-  setTimeout(()=>URL.revokeObjectURL(url),2000);
-  toast(t("تم إعداد النسخة الاحتياطية","Sauvegarde exportée"));
+function renderAuthors(v){
+  v.innerHTML=`
+    <h2 class="section-title">${t("المؤلفون والناشرون","Auteurs et éditeurs")}</h2>
+    <div class="panel">
+      <h3>${t("المؤلفون","Auteurs")} (${state.authors.length})</h3>
+      <div class="table-wrap"><table><thead><tr><th>${t("الاسم","Nom")}</th><th>${t("البلد / نبذة","Pays / info")}</th></tr></thead><tbody>
+        ${state.authors.length?state.authors.map(a=>`<tr><td><strong>${esc(a.name)}</strong></td><td>${esc(a.country||a.bio||"—")}</td></tr>`).join(""):`<tr><td colspan="2"><div class="empty">${t("لا يوجد مؤلفون مسجلون.","Aucun auteur.")}</div></td></tr>`}
+      </tbody></table></div>
+    </div>
+    <div class="panel">
+      <h3>${t("الناشرون","Éditeurs")} (${state.publishers.length})</h3>
+      <div class="table-wrap"><table><thead><tr><th>${t("دار النشر","Éditeur")}</th><th>${t("مكان النشر","Lieu")}</th></tr></thead><tbody>
+        ${state.publishers.length?state.publishers.map(p=>`<tr><td><strong>${esc(p.name)}</strong></td><td>${esc(p.place||"—")}</td></tr>`).join(""):`<tr><td colspan="2"><div class="empty">${t("لا توجد دور نشر مسجلة.","Aucun éditeur.")}</div></td></tr>`}
+      </tbody></table></div>
+    </div>
+  `;
 }
-function restoreData(){
-  let f=$("restoreFile").files[0];
-  if(!f){toast(t("يرجى اختيار ملف أولا","Veuillez choisir un fichier"));return}
-  let r=new FileReader();
-  r.onload=()=>{
+
+function renderClassification(v){
+  v.innerHTML=`
+    <h2 class="section-title">${t("التصنيف الموضوعي","Classification")}</h2>
+    <div class="panel">
+      <div class="table-wrap"><table><thead><tr><th>${t("المجال الرئيسي","Domaine")}</th><th>${t("عدد الكتب","Livres")}</th></tr></thead><tbody>
+        ${domains.map(d=>{
+          const count=state.books.filter(b=>b.domain===d[0]).length;
+          return `<tr><td><strong>${esc(ar()?d[0]:d[1])}</strong></td><td>${count}</td></tr>`;
+        }).join("")}
+      </tbody></table></div>
+    </div>
+  `;
+}
+
+function renderBackup(v){
+  v.innerHTML=`
+    <h2 class="section-title">${t("النسخ والمزامنة","Sauvegarde et sync")}</h2>
+    <div class="panel">
+      <div class="form-actions" style="margin-top:0">
+        <button class="primary" type="button" onclick="window.exportLibrary()">⬇ ${t("تصدير نسخة احتياطية (JSON)","Exporter (JSON)")}</button>
+        <label class="outline" style="cursor:pointer">⬆ ${t("استيراد نسخة احتياطية","Importer")}<input type="file" accept=".json" style="display:none" onchange="window.importLibrary(event)"></label>
+        <button class="outline" type="button" onclick="window.openAuthModal()">☁ ${t("إعدادات الحساب والمزامنة","Compte et sync")}</button>
+      </div>
+      <p class="hint" style="margin-top:12px">${t("آخر تحديث محلي: ","Dernière mise à jour locale : ")}<b>${esc(state.updatedAt||"—")}</b></p>
+    </div>
+  `;
+}
+
+window.exportLibrary=function(){
+  const blob=new Blob([JSON.stringify(buildPayload(),null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=`maktabati_backup_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+};
+window.importLibrary=function(e){
+  const f=e.target.files[0];
+  if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{
     try{
-      let d=JSON.parse(r.result);
-      if(!d||!Array.isArray(d.books))throw Error("invalid");
-      let counts=["books","series","periodicals","articles","authors","publishers"].map(k=>`${k}: ${Array.isArray(d[k])?d[k].length:0}`).join("\n");
-      if(!confirm(t("معاينة محتويات النسخة\n","Aperçu de la sauvegarde\n")+counts+"\n\n"+t("سيتم إنشاء نسخة احتياطية من البيانات الحالية قبل الاستعادة. هل تريد المتابعة واستبدال البيانات؟","Une sauvegarde des données actuelles sera créée avant restauration. Remplacer les données ?")))return;
-      exportData();
-      for(let k of ["books","series","periodicals","articles","authors","publishers"])state[k]=Array.isArray(d[k])?d[k]:[];
-      migrateSeriesData();
-      migrateAuthors();
-      migratePublisherRecords();
-      save();render();
-      toast(t("تمت الاستعادة بعد إنشاء نسخة احتياطية","Restauration effectuée après sauvegarde"));
-    }catch(e){toast(t("الملف غير صالح أو غير متوافق","Fichier invalide ou incompatible"))}
+      const data=JSON.parse(ev.target.result);
+      applyRemotePayload(data);
+      save();
+      toast(t("تم استيراد البيانات بنجاح.","Données importées."));
+    }catch{
+      toast(t("ملف غير صالح.","Fichier invalide."));
+    }
   };
   r.readAsText(f);
-}
-window.exportData=exportData;
-window.restoreData=restoreData;
+};
 
-$("nav").addEventListener("click",e=>{
-  const b=e.target.closest("button[data-page]");
-  if(b && b.dataset.page)setPage(b.dataset.page);
-});
-$("langBtn").onclick=()=>{state.lang=ar()?"fr":"ar";applyLang()};
-$("themeBtn").onclick=()=>{state.theme=state.theme==="dark"?"light":"dark";applyTheme()};
-$("quickAdd").onclick=openBook;
-$("closeModal").onclick=()=>$("bookModal").classList.remove("show");
-$("cancelForm").onclick=()=>$("bookModal").classList.remove("show");
-$("bookModal").addEventListener("click",e=>{if(e.target===$("bookModal"))$("bookModal").classList.remove("show")});
-$("articleModal").addEventListener("click",e=>{if(e.target===$("articleModal"))closeArticleModal()});
-$("detailModal").addEventListener("click",e=>{if(e.target===$("detailModal"))closeDetailModal()});
-$("authModal").addEventListener("click",e=>{if(e.target===$("authModal"))closeAuthModal()});
+document.querySelectorAll("#nav button").forEach(b=>b.addEventListener("click",()=>setPage(b.dataset.page)));
+$("langBtn").addEventListener("click",()=>{state.lang=ar()?"fr":"ar";localStorage.setItem("mb_lang",state.lang);applyLang();});
+$("themeBtn").addEventListener("click",()=>{state.theme=state.theme==="dark"?"light":"dark";localStorage.setItem("mb_theme",state.theme);applyTheme();});
+$("quickAdd").addEventListener("click",()=>window.openBookModal());
+$("closeModal").addEventListener("click",closeBookModal);
+$("cancelForm").addEventListener("click",closeBookModal);
+
+applyTheme();
 applyLang();
 </script>
 
 <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyB3r6dSEv--pL4gZhsHkyz1TgiP1NMuprc",
   authDomain: "ma-bibliotheque-cloud.firebaseapp.com",
@@ -1431,129 +1173,75 @@ const firebaseConfig = {
   appId: "1:39969016798:web:39056014bbcd0dbe90ab4f"
 };
 
-const SDK_URLS = [
-  "https://www.gstatic.com/firebasejs/11.6.1/",
-  "https://cdn.jsdelivr.net/npm/firebase@11.6.1/"
-];
+let pushTimer = null;
 
-async function loadFirebaseModules(){
-  let lastErr=null;
-  for(const base of SDK_URLS){
-    try{
-      const appMod = await import(`${base}firebase-app.js`);
-      const authMod = await import(`${base}firebase-auth.js`);
-      const dbMod = await import(`${base}firebase-firestore.js`);
-      return { appMod, authMod, dbMod };
-    }catch(e){
-      lastErr=e;
-    }
+try {
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const provider = new GoogleAuthProvider();
+
+  async function pushNow(showFeedback = false) {
+    if (!auth.currentUser) return;
+    setSyncStatus("syncing");
+    const ref = doc(db, "libraries", auth.currentUser.uid);
+    await setDoc(ref, buildPayload(), { merge: true });
+    setSyncStatus("online");
+    if (showFeedback) toast(t("تمت المزامنة مع السحابة.","Synchronisé avec le cloud."));
   }
-  throw lastErr || new Error("Failed to load Firebase SDK");
-}
 
-let app, auth, db, googleProvider, authMod, dbMod, unsubscribeDoc=null, pushTimer=null;
-
-async function pushToCloud(showFeedback=false){
-  const u=auth?.currentUser;
-  if(!u||!db||!dbMod)return;
-  setSyncStatus("syncing");
-  try{
-    await dbMod.setDoc(dbMod.doc(db,"libraries",u.uid),buildPayload(),{merge:false});
-    setSyncStatus("online",t("تم الحفظ في السحابة","Enregistré dans le cloud"));
-    if(showFeedback)toast(t("تمت مزامنة المكتبة مع السحابة بنجاح","Bibliothèque synchronisée avec succès"));
-  }catch(err){
-    console.error("Firestore push failed:",err);
-    setSyncStatus("error",String(err.message||err));
-    if(showFeedback)toast(t("تعذر الرفع إلى السحابة","Échec de la synchronisation cloud"));
-  }
-}
-
-async function pullFromCloud(showFeedback=false){
-  const u=auth?.currentUser;
-  if(!u||!db||!dbMod)return;
-  setSyncStatus("syncing");
-  try{
-    const snap=await dbMod.getDoc(dbMod.doc(db,"libraries",u.uid));
-    if(snap.exists()){
-      const remote=snap.data();
-      const localHas=state.books.length+state.periodicals.length+state.articles.length+state.authors.length+state.series.length>0;
-      const remoteHas=(remote.books?.length||0)+(remote.periodicals?.length||0)+(remote.articles?.length||0)+(remote.authors?.length||0)+(remote.series?.length||0)>0;
-      if(remoteHas && (!localHas || String(remote.updatedAt||"")>=String(state.updatedAt||""))){
-        window.__mbApplyRemote(remote);
-        setSyncStatus("online",t("تم جلب أحدث البيانات من السحابة","Données récupérées"));
-        if(showFeedback)toast(t("تم تحديث المكتبة من السحابة","Bibliothèque mise à jour"));
-        return;
+  async function pullNow(showFeedback = false) {
+    if (!auth.currentUser) return;
+    setSyncStatus("syncing");
+    const ref = doc(db, "libraries", auth.currentUser.uid);
+    const snap = await getDoc(ref);
+    if (snap.exists()) {
+      const remote = snap.data();
+      if (!state.updatedAt || (remote.updatedAt && remote.updatedAt > state.updatedAt)) {
+        applyRemotePayload(remote);
+        writeLocalStorageOnly();
       }
     }
-    await pushToCloud(false);
-    setSyncStatus("online",t("متصل ومزامَن","Connecté et synchronisé"));
-    if(showFeedback)toast(t("بياناتك المحلية مزامَنة","Données synchronisées"));
-  }catch(err){
-    console.error("Firestore pull failed:",err);
-    setSyncStatus("error",String(err.message||err));
-    if(showFeedback)toast(t("تعذر الجلب من السحابة","Échec de lecture cloud"));
+    setSyncStatus("online");
+    if (showFeedback) toast(t("تم جلب البيانات السحابية.","Données cloud récupérées."));
   }
-}
 
-window.__mbSchedulePush=()=>{
-  if(!auth?.currentUser||!db)return;
-  clearTimeout(pushTimer);
-  setSyncStatus("syncing");
-  pushTimer=setTimeout(()=>pushToCloud(false),500);
-};
-
-try{
-  const loaded = await loadFirebaseModules();
-  authMod = loaded.authMod;
-  dbMod = loaded.dbMod;
-  app = loaded.appMod.initializeApp(firebaseConfig);
-  auth = authMod.getAuth(app);
-  db = dbMod.getFirestore(app);
-  googleProvider = new authMod.GoogleAuthProvider();
-  state.firebaseLoaded = true;
-
-  window.__mbCloud={
-    ready:true,
-    signInEmail:(email,pass)=>authMod.signInWithEmailAndPassword(auth,email,pass),
-    signUpEmail:(email,pass)=>authMod.createUserWithEmailAndPassword(auth,email,pass),
-    signInGoogle:()=>authMod.signInWithPopup(auth,googleProvider),
-    signOut:()=>authMod.signOut(auth),
-    pushNow:(fb)=>pushToCloud(fb),
-    pullNow:(fb)=>pullFromCloud(fb)
+  window.__mbSchedulePush = function () {
+    clearTimeout(pushTimer);
+    pushTimer = setTimeout(() => {
+      pushNow(false).catch(() => setSyncStatus("error"));
+    }, 600);
   };
 
-  authMod.onAuthStateChanged(auth,async(user)=>{
-    state.user=user||null;
+  window.__mbCloudImpl = {
+    signInEmail: (email, pass) => signInWithEmailAndPassword(auth, email, pass),
+    signUpEmail: (email, pass) => createUserWithEmailAndPassword(auth, email, pass),
+    signInGoogle: () => signInWithPopup(auth, provider),
+    signOut: () => signOut(auth),
+    pushNow,
+    pullNow
+  };
+
+  onAuthStateChanged(auth, async (user) => {
+    state.user = user || null;
+    window.__mbCloud.user = user || null;
     updateAuthHeaderUI();
-    if(unsubscribeDoc){unsubscribeDoc();unsubscribeDoc=null;}
-    if(user){
-      await pullFromCloud(false);
-      unsubscribeDoc=dbMod.onSnapshot(dbMod.doc(db,"libraries",user.uid),(snap)=>{
-        if(!snap.exists())return;
-        const remote=snap.data();
-        if(remote && remote.updatedAt && String(remote.updatedAt)!==String(state.updatedAt||"")){
-          window.__mbApplyRemote(remote);
-          setSyncStatus("online",t("تمت المزامنة تلقائياً","Synchronisé automatiquement"));
-        }
-      });
-    }else{
-      setSyncStatus("local",t("الوضع المحلي مفعل","Mode local actif"));
+    if (user) {
+      try {
+        await pullNow(false);
+      } catch {
+        setSyncStatus("error");
+      }
+    } else {
+      setSyncStatus("local");
     }
-    if(state.page==="backup")render();
-    if(document.getElementById("authModal")?.classList.contains("show"))renderAuthModal();
   });
-}catch(err){
-  console.error("Firebase init failed:",err);
-  state.firebaseLoaded = false;
+
+  window.__mbCloud.ready = true;
+} catch (err) {
   window.__mbCloud.ready = false;
+  setSyncStatus("error");
 }
 </script>
-</body></html>
-```[cite: 2]
-
-### خطوات التحديث السريعة:
-1. افتح ملف `index.html` في مستودعك `ma-bibliotheque` على GitHub واضغط أيقونة القلم (**Edit file**)[cite: 1].
-2. استبدل الكود القديم بالكود أعلاه، ثم اضغط **Commit changes**.
-3. انتظر نحو دقيقة حتى يكتمل نشر GitHub Pages، ثم افتح الرابط في الهاتفين وأعد **الإضافة إلى الشاشة الرئيسية** لتجربة التطبيق بعد التحديث[cite: 1, 2].
-
-هل تودّ أن نجرب هذا التحديث أولاً ثم نرى كيف يبدو على الهاتفين قبل أي تعديل إضافي؟
+</body>
+</html>
